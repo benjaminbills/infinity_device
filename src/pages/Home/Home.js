@@ -1,30 +1,30 @@
-import {
-  Box,
-  Button,
-  Container,
-  HStack,
-  Image,
-  Stack,
-  Text,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import Apparatus from "../../assets/images/apparatus-bg.png";
+import Stapler from "../../assets/images/stapler.png";
+import Circle from "../../assets/images/circle-bg.png";
+import HeartBeat from "../../assets/images/heartbeat.png";
+import One from "../../assets/images/01.png";
+import Two from "../../assets/images/02.png";
+import Three from "../../assets/images/03.png";
+import { MapContainer } from 'react-leaflet/MapContainer'
+import { Marker } from "react-leaflet/Marker";
 
-import Apparatus from "../assets/images/apparatus.jpeg";
-import Stapler from "../assets/images/stapler.png";
-
+import { Popup } from "react-leaflet/Popup";
+import { TileLayer } from 'react-leaflet/TileLayer'
+// import { useMap } from 'react-leaflet/hooks
+import "./home.css";
 function Home() {
   const [imageIndex, setImageIndex] = useState(0);
+const position = [1.3107, 36.8250];
 
   const settings = {
     dots: true,
     infinite: true,
     lazyLoad: false,
-    speed: 300,
+    speed: 100,
     slidesToShow: 1,
     // centerMode: true,
     centerPadding: 0,
@@ -32,8 +32,122 @@ function Home() {
     // beforeChange: (current, next) => setImageIndex(next),
   };
   return (
-    <div pt={"5"} pb={"5"}>
-      <Stack
+    <div className="font-link">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center place-items-center mt-14">
+        <div className="text-center md:text-left">
+          <h1 className="md:text-6xl lg:text-7xl text-4xl font-normal">
+            Better Pricing,
+            <br />
+            Guaranteed.
+          </h1>
+          <p className="my-6 text-sm">
+            We journey with you everyday, each day a gift to us
+          </p>
+          <button className="btn rounded-3xl shadow-md">View Catalog</button>
+        </div>
+        <div className="image-section hidden md:block">
+          <img className="circle" src={Apparatus} alt="" />
+        </div>
+      </div>
+
+      <hr className="my-10 md:my-32 mx-auto" />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center place-items-center">
+        <div className="text-center md:text-left ">
+          <h6 className="text-md md:text-2xl lg:text-3xl">
+            As your solution for manufacturer - direct medical services,
+            equipment and consumables, our team is dedicated to helping you save
+            money.
+          </h6>
+          <button className="btn rounded-3xl my-10 shadow-md">
+            Get Started
+          </button>
+        </div>
+        <div className="carousel-section">
+          <Carousel
+            autoPlay={true}
+            showThumbs={false}
+            showStatus={false}
+            showArrows={true}
+            className="my-auto"
+          >
+            <div>
+              <img src={Stapler} alt="" />{" "}
+            </div>
+            <div></div>
+            <div></div>
+          </Carousel>
+        </div>
+      </div>
+
+      <div className="my-20">
+        <div className="my-16">
+          <p className="text-gray-400 text-sm">Our Simple Steps</p>
+          <h6 className="text-3xl">How We Work</h6>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-between">
+          <div className="text-left mb-16">
+            <div className="mb-6">
+              <img src={One} alt="" />
+            </div>
+            <div className="">
+              <p className="font-bold text-gray-500">Access Our Catalog</p>
+              <p className="">
+                Get access to our variety of
+                <br /> services and devices that fit your needs.
+              </p>
+            </div>
+          </div>
+          <div className="text-left mb-16">
+            <div className="mb-6">
+              <img className="" src={Two} alt="" />
+            </div>
+            <div className="">
+              <p className="font-bold text-gray-500">Contact Us</p>
+              <p>
+                Whether coming by our offices or using
+                <br /> our website, we are more than ready to serve you.
+              </p>
+            </div>
+          </div>
+          <div className="mb-16">
+            <div className="mb-6">
+              <img src={Three} alt="" />
+            </div>
+            <div className="">
+              <p className="font-bold text-gray-500">Buy From Us</p>
+              <p>
+                Our prices are very competitive
+                <br /> despite not compromising on quality.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="question-section h-22 my-20">
+          <div className="m-auto text-center p-20 md:p-32">
+            <p>Got any questions?</p>
+            <p className="my-6 md:text-2xl">+254-7431-56011</p>
+            <p>and speak with a product specialist today.</p>
+          </div>
+        </div>
+      </div>
+
+
+      {/* <div>
+        <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
+          <TileLayer
+          />
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
+        ,
+      </div> */}
+      {/* <Stack
         display={"flex"}
         direction={["column-reverse", "row", "row"]}
         pt="5"
@@ -208,7 +322,7 @@ function Home() {
           </Box>
           <Box></Box>
         </Stack>
-      </Box>
+      </Box> */}
     </div>
   );
 }

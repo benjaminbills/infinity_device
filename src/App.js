@@ -1,9 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Box, Button, ChakraProvider, Container } from "@chakra-ui/react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 

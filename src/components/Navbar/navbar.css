@@ -1,0 +1,5 @@
+.nav-link:hover {
+    background-color: #71BBBC;
+    color: white;
+    transition: 200ms;
+}

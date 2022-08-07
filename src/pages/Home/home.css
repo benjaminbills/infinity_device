@@ -1,0 +1,24 @@
+.btn {
+  border: #71bbbc solid 2px;
+  color: #71bbbc;
+  font-size: smaller;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #71bbbc;
+  transition: 200ms;
+}
+
+.carousel-section {
+  background-color: #e6feff;
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+}
+
+.question-section {
+    background-color: #E6FEFF;
+}
