@@ -26,7 +26,7 @@ import ElectricLaparoscopicCutting from "../assets/images/ElectricLaparoscopicCu
 import SmartPressElectric from "../assets/images/SmartPressElectric.jpeg";
 
 import Apparatus from "../assets/images/apparatus.jpeg";
-import Stapler from "../assets/images/stapler.png";
+import Hocer from "../assets/images/hocer2.jpeg";
 import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
 import Footer from "../components/Footer";
 
@@ -393,6 +393,47 @@ function Home() {
             pl={["0", "0", "10"]}
           >
             <Image src={SmartPressElectric} />
+          </Box>
+        </Box>
+        <Box
+          display={"flex"}
+          flexDir={["column-reverse", "column-reverse", "row"]}
+          pt={["0", "0", "10"]}
+        >
+          <Box
+            display={"flex"}
+            w={["100%", "100%", "60%"]}
+            pr={["0", "0", "10"]}
+          >
+            <Image src={Hocer} />
+          </Box>
+          <Box
+            display={"flex"}
+            flexDir={"column"}
+            w={["100%", "100%", "40%"]}
+            textAlign={["right", "right", "left"]}
+          >
+            <Text fontSize={"xl"} as={"h1"}>
+              Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
+            </Text>
+            <Box>
+              <Text>
+                Inheritance in the era of intelligent squeezing, a master of
+                scientific anastomosis and technology integration
+              </Text>
+            </Box>
+
+            <Button
+              mb={["5", "5", "0"]}
+              w={["40%"]}
+              marginRight={["none", "none", "auto"]}
+              mt={"5"}
+              colorScheme="green"
+              borderRadius={"none"}
+              rightIcon={<ArrowForwardIcon />}
+            >
+              Read more
+            </Button>
           </Box>
         </Box>
       </Stack>
