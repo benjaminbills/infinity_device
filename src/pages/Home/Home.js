@@ -11,10 +11,9 @@ import Two from "../../assets/images/02.png";
 import Three from "../../assets/images/03.png";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { Marker } from "react-leaflet/Marker";
-
 import { Popup } from "react-leaflet/Popup";
 import { TileLayer } from "react-leaflet/TileLayer";
-// import { useMap } from 'react-leaflet/hooks
+import { motion, useScroll } from "framer-motion";
 import "./home.css";
 function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -34,7 +33,11 @@ function Home() {
   return (
     <div className="font-link">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center place-items-center mt-14">
-        <div className="text-center md:text-left">
+        <motion.div
+        initial={{ x:-50 }}
+        whileInView={{ x:0 }}
+        transition={{ duration:1 }}
+         className="text-center md:text-left">
           <h1 className="md:text-6xl lg:text-7xl text-4xl font-normal">
             Better Pricing,
             <br />
@@ -44,15 +47,25 @@ function Home() {
             We journey with you everyday, each day a gift to us
           </p>
           <button className="btn rounded-3xl shadow-md">View Catalog</button>
-        </div>
-        <div className="image-section hidden md:block">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="image-section hidden md:block"
+        >
           <img className="circle" src={Apparatus} alt="" />
-        </div>
+        </motion.div>
       </div>
 
       <hr className="my-10 md:my-32 mx-auto" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center place-items-center md:px-28">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="grid grid-cols-1 md:grid-cols-2 items-center justify-center place-items-center md:px-28"
+      >
         <div className="text-center md:text-left ">
           <h6 className="text-xl md:text-2xl lg:text-3xl">
             As your solution for manufacturer - direct medical services,
@@ -78,15 +91,25 @@ function Home() {
             <div></div>
           </Carousel>
         </div>
-      </div>
+      </motion.div>
 
       <div className="my-20">
-        <div className="my-16">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="my-16"
+        >
           <p className="text-gray-400 text-sm">Our Simple Steps</p>
           <h6 className="text-3xl">How We Work</h6>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-between">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-between"
+        >
           <div className="text-left mb-16">
             <div className="mb-6">
               <img src={One} alt="" />
@@ -123,19 +146,31 @@ function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="question-section h-22 my-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="question-section h-22 my-20"
+        >
           <div className="m-auto text-center p-20 md:p-32">
             <p>Got any questions?</p>
-            <p className="my-6 md:text-2xl text-gray-400 font-bold">+254-7431-56011</p>
+            <p className="my-6 md:text-2xl text-gray-400 font-bold">
+              +254-7431-56011
+            </p>
             <p>and speak with a product specialist today.</p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <div className="mb-12 md:mb-0">
+      <modiv className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="mb-12 md:mb-0"
+        >
           <p className="font-bold text-gray-500">Stay Updated</p>
           <form className="flex items-center" action="">
             <input
@@ -163,9 +198,14 @@ function Home() {
           <p className="text-sm">
             Join our monthly newsletter for monthly updates
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mb-12 md:mb-0 text-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="mb-12 md:mb-0 text-center"
+        >
           <p className="font-bold text-gray-500">Social with Us</p>
           <p className="text-sm py-3">
             <a href="/">Facebook</a>
@@ -176,8 +216,12 @@ function Home() {
           <p className="text-sm py-3">
             <a href="/">Instagram</a>
           </p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <MapContainer
             center={[-1.2862398, 36.8268042]}
             zoom={13}
@@ -193,8 +237,8 @@ function Home() {
               </Popup>
             </Marker>
           </MapContainer>
-        </div>
-      </div>
+        </motion.div>
+      </modiv>
     </div>
   );
 }
