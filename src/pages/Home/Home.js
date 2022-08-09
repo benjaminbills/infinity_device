@@ -9,16 +9,16 @@ import HeartBeat from "../../assets/images/heartbeat.png";
 import One from "../../assets/images/01.png";
 import Two from "../../assets/images/02.png";
 import Three from "../../assets/images/03.png";
-import { MapContainer } from 'react-leaflet/MapContainer'
+import { MapContainer } from "react-leaflet/MapContainer";
 import { Marker } from "react-leaflet/Marker";
 
 import { Popup } from "react-leaflet/Popup";
-import { TileLayer } from 'react-leaflet/TileLayer'
+import { TileLayer } from "react-leaflet/TileLayer";
 // import { useMap } from 'react-leaflet/hooks
 import "./home.css";
 function Home() {
   const [imageIndex, setImageIndex] = useState(0);
-const position = [1.3107, 36.8250];
+  const position = [1.2921, 36.8219];
 
   const settings = {
     dots: true,
@@ -52,9 +52,9 @@ const position = [1.3107, 36.8250];
 
       <hr className="my-10 md:my-32 mx-auto" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center place-items-center md:px-28">
         <div className="text-center md:text-left ">
-          <h6 className="text-md md:text-2xl lg:text-3xl">
+          <h6 className="text-xl md:text-2xl lg:text-3xl">
             As your solution for manufacturer - direct medical services,
             equipment and consumables, our team is dedicated to helping you save
             money.
@@ -128,201 +128,73 @@ const position = [1.3107, 36.8250];
         <div className="question-section h-22 my-20">
           <div className="m-auto text-center p-20 md:p-32">
             <p>Got any questions?</p>
-            <p className="my-6 md:text-2xl">+254-7431-56011</p>
+            <p className="my-6 md:text-2xl text-gray-400 font-bold">+254-7431-56011</p>
             <p>and speak with a product specialist today.</p>
           </div>
         </div>
       </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-12 md:mb-0">
+          <p className="font-bold text-gray-500">Stay Updated</p>
+          <form className="flex items-center" action="">
+            <input
+              className="my-7 w-3/4"
+              type="email"
+              name=""
+              id=""
+              placeholder="Enter email address"
+            />
+            <button type="submit">
+              <svg
+                className="w-6 h-6"
+                fill="#71bbbc"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </form>
+          <p className="text-sm">
+            Join our monthly newsletter for monthly updates
+          </p>
+        </div>
 
-      {/* <div>
-        <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
-          <TileLayer
-          />
-          <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer>
-        ,
-      </div> */}
-      {/* <Stack
-        display={"flex"}
-        direction={["column-reverse", "row", "row"]}
-        pt="5"
-        pb="5"
-      >
-        <Box w={["100%", "50%", "75%"]}>
-          <Text fontSize={"4xl"} as={"h1"}>
-            {" "}
-            Better Pricing, <br /> Guaranteed
-          </Text>
-          <Text pb={"5"}>
-            We journey with you everyday and each with us is a gift
-          </Text>
-          <Button colorScheme="teal" variant="outline" borderRadius={"3xl"}>
-            View Catalog
-          </Button>
-        </Box>
-        <Box w={["100%", "50%", "25%"]}>
-          <Container display={"flex"} flexDir="column">
-            <Carousel
-              autoPlay
-              showThumbs={false}
-              showStatus={false}
-              showArrows={false}
-            >
-              <Box position={"relative"}>
-                <Image src={Apparatus} />
-                <Text
-                  borderRadius={"5"}
-                  opacity={".8"}
-                  background={"gray.50"}
-                  width={"100%"}
-                  position={"absolute"}
-                  top={"80%"}
-                  mb={6}
-                  mt={0}
-                >
-                  Legend 1
-                </Text>
-              </Box>
-              <Box position={"relative"}>
-                <Image src={Apparatus} />
-                <Text
-                  background={"gray.50"}
-                  width={"150px"}
-                  position={"absolute"}
-                  bottom={"8px"}
-                  left={"16px"}
-                  mb={6}
-                  mt={0}
-                >
-                  Legend 1
-                </Text>
-              </Box>
-              <Box position={"relative"}>
-                <Image src={Apparatus} />
-                <Text
-                  position={"absolute"}
-                  top={"8px"}
-                  right={"16px"}
-                  mb={6}
-                  mt={0}
-                >
-                  Legend 1
-                </Text>
-              </Box>
-              <Box position={"relative"}>
-                <Image src={Apparatus} />
-                <Text
-                  position={"absolute"}
-                  top={"50%"}
-                  left={"50%"}
-                  mb={6}
-                  mt={0}
-                >
-                  Legend 1
-                </Text>
-              </Box>
-              <Box position={"relative"}>
-                <Image src={Apparatus} />
-                <Text
-                  position={"absolute"}
-                  bottom={"8px"}
-                  right={"16px"}
-                  mb={6}
-                  mt={0}
-                >
-                  Legend 1
-                </Text>
-              </Box>
-            </Carousel>
-          </Container>
-        </Box>
-      </Stack>
-      <Box>
-        <Stack direction={"row"} pt={"5"} pb={"5"}>
-          <Wrap spacing={"4"} justify={"left"}>
-            <WrapItem>
-              <Button>Fengh</Button>
-            </WrapItem>
-            <WrapItem>
-              <Button>Fenghing</Button>
-            </WrapItem>
-            <WrapItem>
-              <Button>Fengh</Button>
-            </WrapItem>
-            <WrapItem>
-              <Button>Working</Button>
-            </WrapItem>
-          </Wrap>
-        </Stack>
-      </Box>
-      <hr />
-      <Stack pt={"4%"} display={"flex"} flexDir={["column", "row"]}>
-        <Box pt={["5%", "20%"]} w={["100%", "50%", "40%"]}>
-          <Text>
-            As your solution for manufacturer - direct medical devices,
-            equipment and consumables, our team is dedicated to helping you save
-            money.
-          </Text>
-          <Button
-            mt={"5"}
-            colorScheme="teal"
-            variant="outline"
-            borderRadius={"3xl"}
+        <div className="mb-12 md:mb-0 text-center">
+          <p className="font-bold text-gray-500">Social with Us</p>
+          <p className="text-sm py-3">
+            <a href="/">Facebook</a>
+          </p>
+          <p className="text-sm py-3">
+            <a href="/">Twitter</a>
+          </p>
+          <p className="text-sm py-3">
+            <a href="/">Instagram</a>
+          </p>
+        </div>
+        <div>
+          <MapContainer
+            center={[-1.2862398, 36.8268042]}
+            zoom={13}
+            scrollWheelZoom={false}
           >
-            Get started
-          </Button>
-        </Box>
-        <Box
-          h={"400px"}
-          w={"400px"}
-          backgroundColor={"#d4fad8"}
-          borderRadius={"full"}
-          display={"flex"}
-          justifyContent={"center"}
-          alignContent={"center"}
-          alignItems={"center"}
-        >
-          <Carousel
-            autoPlay
-            showThumbs={false}
-            showStatus={false}
-            showArrows={false}
-          >
-            <Box position={"relative"}>
-              <Image src={Stapler} />
-            </Box>
-            <Box position={"relative"}>
-              <Image src={Stapler} />
-            </Box>
-          </Carousel>
-        </Box>
-      </Stack>
-      <Box
-        p={"10"}
-        display={"flex"}
-        flexDir={"column"}
-        backgroundColor={"#d4fad8"}
-        borderBottom={"1px solid black"}
-      >
-        <Text>Got any Questions?</Text>
-        <Text>+254-7431-56011</Text>
-        <Text>and speak with a product specialist today.</Text>
-      </Box>
-      <Box pt={"5"} pb={"5"}>
-        <Stack flexDir={["column", "row"]}>
-          <Box w={["100%", "30%", "30%"]}>
-            <Text>We deeply care about our patients.</Text>
-            <Text>+254-7431-56011</Text>
-            <Text>contact@infintydevices</Text>
-          </Box>
-          <Box></Box>
-        </Stack>
-      </Box> */}
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[-1.2862398, 36.8268042]}>
+              <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+              </Popup>
+            </Marker>
+          </MapContainer>
+        </div>
+      </div>
     </div>
   );
 }

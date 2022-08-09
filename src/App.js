@@ -1,6 +1,8 @@
 import "./App.css";
 import { Box, Button, ChakraProvider, Container } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About";
@@ -18,6 +20,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
+            <Footer />
           </Container>
         </Box>
       </BrowserRouter>

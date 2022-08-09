@@ -22,3 +22,14 @@
 .question-section {
     background-color: #E6FEFF;
 }
+
+input[type='email']{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: black solid 2.5px;
+}
+
+::placeholder{
+    font-size: smaller;
+}
