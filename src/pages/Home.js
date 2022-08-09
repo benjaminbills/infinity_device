@@ -29,6 +29,7 @@ import Apparatus from "../assets/images/apparatus.jpeg";
 import Hocer from "../assets/images/hocer2.jpeg";
 import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
 import Footer from "../components/Footer";
+import Map from "../components/Map";
 
 function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -328,7 +329,7 @@ function Home() {
             display={"flex"}
             flexDir={"column"}
             w={["100%", "100%", "40%"]}
-            textAlign={["right", "right", "left"]}
+            textAlign={["left", "left", "left"]}
           >
             <Text fontSize={"xl"} as={"h1"}>
               Second Lunar® Disposable Fully Electric Laparoscopic Cutting
@@ -411,7 +412,7 @@ function Home() {
             display={"flex"}
             flexDir={"column"}
             w={["100%", "100%", "40%"]}
-            textAlign={["right", "right", "left"]}
+            textAlign={["left", "left", "left"]}
           >
             <Text fontSize={"xl"} as={"h1"}>
               Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
@@ -437,6 +438,7 @@ function Home() {
           </Box>
         </Box>
       </Stack>
+      <Map />
       <Footer />
     </div>
   );

@@ -45,6 +45,10 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+.map-container {
+  width: 100%;
+  height: 50vh;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,7 +1,7 @@
 import { Box, Image, Spacer, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import Logo from "../assets/images/logo.png";
-
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 function Footer() {
   return (
     <Box bg={"gray.200"} h={["200px"]}>
@@ -32,6 +32,7 @@ function Footer() {
           <Text>Contact Number:0743156011, 0743156011</Text>
           <Text>Email:infinitydevices@gmail.com</Text>
         </Box>
+        <Box></Box>
       </Stack>
     </Box>
   );
