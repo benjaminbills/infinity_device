@@ -23,10 +23,12 @@ import landing from "../assets/images/landing.jpg";
 import surgeryroom from "../assets/images/surgeryroom.jpeg";
 import disposableBurstPolymer from "../assets/images/DisposableBurstClip.png";
 import ElectricLaparoscopicCutting from "../assets/images/ElectricLaparoscopicCutting.jpeg";
+import SmartPressElectric from "../assets/images/SmartPressElectric.jpeg";
 
 import Apparatus from "../assets/images/apparatus.jpeg";
 import Stapler from "../assets/images/stapler.png";
 import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
+import Footer from "../components/Footer";
 
 function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -268,23 +270,32 @@ function Home() {
           View Our Catalog
         </Button>{" "}
       </Box>
-      <Stack flexDir={"column"}>
-        <Box display={"flex"} flexDir={["column", "column", "row"]}>
+      <Stack flexDir={"column"} pb={"10"}>
+        <Box
+          display={"flex"}
+          flexDir={["column", "column", "row"]}
+          pt={["0", "0", "0"]}
+        >
           <Box
             display={"flex"}
             flexDir={"column"}
-            justifyContent={"right"}
-            justifyItems={"right"}
-            w={["100%", "40%"]}
+            w={["100%", "100%", "40%"]}
+            textAlign={["left", "left", "right"]}
           >
-            <Text as={"h1"}>
+            <Text fontSize={"xl"} as={"h1"}>
               New Lunar® Disposable Fully Electric Laparoscopic Cutting Stapler
             </Text>
-            <Text>
-              Inheritance in the era of intelligent squeezing, a master of
-              scientific anastomosis and technology integration
-            </Text>
+            <Box>
+              <Text>
+                Inheritance in the era of intelligent squeezing, a master of
+                scientific anastomosis and technology integration
+              </Text>
+            </Box>
+
             <Button
+              mb={["5", "5", "0"]}
+              w={["40%"]}
+              marginLeft={["none", "none", "auto"]}
               mt={"5"}
               colorScheme="green"
               borderRadius={"none"}
@@ -293,11 +304,99 @@ function Home() {
               Read more
             </Button>
           </Box>
-          <Box w={["100%", "60%"]}>
+          <Box
+            display={"flex"}
+            w={["100%", "100%", "60%"]}
+            pl={["0", "0", "10"]}
+          >
             <Image src={ElectricLaparoscopicCutting} />
           </Box>
         </Box>
+        <Box
+          display={"flex"}
+          flexDir={["column-reverse", "column-reverse", "row"]}
+          pt={["0", "0", "10"]}
+        >
+          <Box
+            display={"flex"}
+            w={["100%", "100%", "60%"]}
+            pr={["0", "0", "10"]}
+          >
+            <Image src={disposableBurstPolymer} />
+          </Box>
+          <Box
+            display={"flex"}
+            flexDir={"column"}
+            w={["100%", "100%", "40%"]}
+            textAlign={["right", "right", "left"]}
+          >
+            <Text fontSize={"xl"} as={"h1"}>
+              Second Lunar® Disposable Fully Electric Laparoscopic Cutting
+              Stapler
+            </Text>
+            <Box>
+              <Text>
+                Inheritance in the era of intelligent squeezing, a master of
+                scientific anastomosis and technology integration
+              </Text>
+            </Box>
+
+            <Button
+              mb={["5", "5", "0"]}
+              w={["40%"]}
+              marginRight={["none", "none", "auto"]}
+              mt={"5"}
+              colorScheme="green"
+              borderRadius={"none"}
+              rightIcon={<ArrowForwardIcon />}
+            >
+              Read more
+            </Button>
+          </Box>
+        </Box>
+        <Box
+          display={"flex"}
+          flexDir={["column", "column", "row"]}
+          pt={["0", "0", "10"]}
+        >
+          <Box
+            display={"flex"}
+            flexDir={"column"}
+            w={["100%", "100%", "40%"]}
+            textAlign={["left", "left", "right"]}
+          >
+            <Text fontSize={"xl"} as={"h1"}>
+              New Lunar® Disposable Fully Electric Laparoscopic Cutting Stapler
+            </Text>
+            <Box>
+              <Text>
+                Inheritance in the era of intelligent squeezing, a master of
+                scientific anastomosis and technology integration
+              </Text>
+            </Box>
+
+            <Button
+              mb={["5", "5", "0"]}
+              w={["40%"]}
+              marginLeft={["none", "none", "auto"]}
+              mt={"5"}
+              colorScheme="green"
+              borderRadius={"none"}
+              rightIcon={<ArrowForwardIcon />}
+            >
+              Read more
+            </Button>
+          </Box>
+          <Box
+            display={"flex"}
+            w={["100%", "100%", "60%"]}
+            pl={["0", "0", "10"]}
+          >
+            <Image src={SmartPressElectric} />
+          </Box>
+        </Box>
       </Stack>
+      <Footer />
     </div>
   );
 }
