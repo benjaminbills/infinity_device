@@ -1,6 +1,8 @@
 import {
   Box,
   Button,
+  FormControl,
+  FormLabel,
   Hide,
   HStack,
   Image,
@@ -63,20 +65,27 @@ function Footer() {
             </Text>
             <Text mb={"2"}>Contact Number:0743156011, 0743156011</Text>
             <Text mb={"2"}>Email:infinitydevices@gmail.com</Text>
-            <InputGroup color={"white"} w={["100%", "100%", "50%"]} size="md">
-              <Input
-                color={"white"}
-                pr="4.5rem"
-                type={"email"}
-                ref={emailRef}
-                placeholder="Enter password"
-              />
-              <InputRightElement width="4.5rem">
-                <Button colorScheme="green" type="submit" onClick={submitEmail}>
-                  Submit
-                </Button>
-              </InputRightElement>
-            </InputGroup>{" "}
+            <FormControl>
+              <FormLabel>Get notified when we add new products</FormLabel>
+              <InputGroup color={"white"} w={["100%", "100%", "50%"]} size="md">
+                <Input
+                  color={"white"}
+                  pr="4.5rem"
+                  type={"email"}
+                  ref={emailRef}
+                  placeholder="Enter email"
+                />
+                <InputRightElement width="4.5rem">
+                  <Button
+                    colorScheme="green"
+                    type="submit"
+                    onClick={submitEmail}
+                  >
+                    Submit
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
+            </FormControl>
           </Box>
           <Spacer />
           <Box pt={["4", "4", "0"]}>
