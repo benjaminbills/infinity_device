@@ -1,11 +1,10 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
-import {
-  GoogleMap,
-  useLoadScript,
-  Marker,
-  useJsApiLoader,
-} from "@react-google-maps/api";
+import { useMemo } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+
+const containerStyle = {
+  width: "200px",
+  height: "200px",
+};
 
 function Map() {
   const { isLoaded } = useLoadScript({
@@ -16,9 +15,16 @@ function Map() {
 }
 
 function MapOut() {
-  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
+  const center = useMemo(
+    () => ({ lat: -1.2967914934844869, lng: 36.80692452943229 }),
+    []
+  );
   return (
-    <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
+    <GoogleMap
+      zoom={18.7}
+      center={center}
+      mapContainerClassName="map-container"
+    >
       <Marker position={center} />
     </GoogleMap>
   );
