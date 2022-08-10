@@ -30,6 +30,7 @@ import Hocer from "../assets/images/hocer2.jpeg";
 import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
 import Footer from "../components/Footer";
 import Map from "../components/Map";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -76,7 +77,12 @@ function Home() {
           <Text pb={"5"}>
             We journey with you everyday and each with us is a gift
           </Text>
-          <Button colorScheme="teal" variant="outline" borderRadius={"3xl"}>
+          <Button
+            rightIcon={<ArrowForwardIcon />}
+            colorScheme="teal"
+            variant="outline"
+            borderRadius={"none"}
+          >
             View Catalog
           </Button>
         </Box>
@@ -222,28 +228,23 @@ function Home() {
           </Box>
           <Box pr={["none", "none", "8"]}>
             <Text width={"100%"} textAlign={"justify"}>
-              Fenghe Medical is based in China and faces the world; it focuses
-              on the research and development of innovative medical devices and
-              consumables for minimally invasive surgery. The field of minimally
-              invasive surgery in the world and in China is in the ascendant,
-              bringing many benefits to patients and at the same time there is
-              huge room for improvement. In the future, minimally invasive
-              surgery and even non-invasive surgery will be helped by more and
-              more new medical devices. It is shorter, has fewer complications,
-              has a lower rate of trauma or bleeding, and is also expected to
-              achieve the goal of more complete long-term removal of hidden
-              dangers and a higher rate of complete cure.
+              Infinity Devices Africa Ltd, is a Company whose main focus is to
+              deliver technology driven solutions to a clinical problem via a
+              trio approach that encompasses the meeting of Clinical Need,
+              Market Appropriate Pricing and Value Creation.
             </Text>
           </Box>
-          <Button
-            mt={"5"}
-            colorScheme="teal"
-            borderRadius={"none"}
-            variant="outline"
-            rightIcon={<ArrowForwardIcon />}
-          >
-            See more
-          </Button>
+          <Link to="/about">
+            <Button
+              mt={"5"}
+              colorScheme="teal"
+              borderRadius={"none"}
+              variant="outline"
+              rightIcon={<ArrowForwardIcon />}
+            >
+              Read more
+            </Button>
+          </Link>
         </Box>
         <Box w={["100%", "100%", "50%"]} display={"flex"}>
           <Image src={landing} />
@@ -438,8 +439,8 @@ function Home() {
           </Box>
         </Box>
       </Stack>
-      <Map />
-      <Footer />
+      {/* <Map /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
