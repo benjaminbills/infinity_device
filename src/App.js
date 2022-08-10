@@ -12,8 +12,8 @@ function App() {
   return (
     <ChakraProvider>
       <BrowserRouter>
-        <Box h="100vh">
-          <Box p="5">
+        <Box h="100vh" display={"flex"} flexDir="column">
+          <Box p="5" color={"gray.600"}>
             <Container maxW="container.xl">
               <Navbar />
               <Routes>
@@ -23,6 +23,7 @@ function App() {
               </Routes>
             </Container>
           </Box>
+          <Footer />
         </Box>
       </BrowserRouter>
     </ChakraProvider>
