@@ -22,8 +22,68 @@ function Catalog() {
             flexDir={["column", "column", "row"]}
             pt={["0", "0", "0"]}
           >
-            <Box display={"flex"} w={["100%", "100%", "60%"]}>
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              w={["100%", "50%", "50%"]}
+              pr={("0", "5", "5")}
+            >
               <Image src={ElectricLaparoscopicCutting} />
+              <Text
+                fontSize={"xl"}
+                as={"h1"}
+                textOverflow={"ellipsis"}
+                overflow={"hidden"}
+                whiteSpace="nowrap"
+              >
+                Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
+              </Text>
+              <Text>
+                Inheritance in the era of intelligent squeezing, a master of
+                scientific anastomosis and technology integration
+              </Text>
+              <Button
+                mb={["5", "5", "0"]}
+                w={["40%"]}
+                marginRight={["none", "none", "auto"]}
+                mt={"5"}
+                colorScheme="green"
+                borderRadius={"none"}
+                rightIcon={<ArrowForwardIcon />}
+              >
+                Read more
+              </Button>
+            </Box>
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              w={["100%", "50%", "50%"]}
+            >
+              <Image src={ElectricLaparoscopicCutting} />
+              <Text
+                fontSize={"xl"}
+                as={"h1"}
+                textOverflow={"ellipsis"}
+                overflow={"hidden"}
+                whiteSpace="nowrap"
+              >
+                Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
+              </Text>
+              <Text>
+                Inheritance in the era of intelligent squeezing, a master of
+                scientific anastomosis and technology integration
+              </Text>
+              <Button
+                mb={["5", "5", "0"]}
+                w={["40%"]}
+                marginRight={["none", "none", "auto"]}
+                mt={"5"}
+                colorScheme="green"
+                borderRadius={"none"}
+                rightIcon={<ArrowForwardIcon />}
+              >
+                Read more
+              </Button>
             </Box>
           </Box>
         </Stack>
