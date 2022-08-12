@@ -310,6 +310,10 @@ function Home() {
             display={"flex"}
             w={["100%", "100%", "60%"]}
             pl={["0", "0", "10"]}
+            _hover={{
+              transform: "scale(1.1)",
+              transition: " 0.8s all",
+            }}
           >
             <Image src={ElectricLaparoscopicCutting} />
           </Box>
@@ -323,6 +327,10 @@ function Home() {
             display={"flex"}
             w={["100%", "100%", "60%"]}
             pr={["0", "0", "10"]}
+            _hover={{
+              transform: "scale(1.1)",
+              transition: " 0.8s all",
+            }}
           >
             <Image src={disposableBurstPolymer} />
           </Box>
@@ -393,6 +401,10 @@ function Home() {
             display={"flex"}
             w={["100%", "100%", "60%"]}
             pl={["0", "0", "10"]}
+            _hover={{
+              transform: "scale(1.1)",
+              transition: " 0.8s all",
+            }}
           >
             <Image src={SmartPressElectric} />
           </Box>
@@ -406,6 +418,10 @@ function Home() {
             display={"flex"}
             w={["100%", "100%", "60%"]}
             pr={["0", "0", "10"]}
+            _hover={{
+              transform: "scale(1.1)",
+              transition: " 0.8s all",
+            }}
           >
             <Image src={Hocer} />
           </Box>

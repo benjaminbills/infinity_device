@@ -1,4 +1,13 @@
-import { Box, Button, Center, Image, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Image,
+  Stack,
+  Text,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import React from "react";
 import ElectricLaparoscopicCutting from "../assets/images/ElectricLaparoscopicCutting.jpeg";
 
@@ -16,77 +25,96 @@ function Catalog() {
             Catalog
           </Text>
         </Center>
-        <Stack>
-          <Box
+        <Box>
+          <Stack
+            pt={"5"}
+            spacing={"4%"}
             display={"flex"}
-            flexDir={["column", "column", "row"]}
-            pt={["0", "0", "0"]}
+            direction={["column", "row", "row"]}
           >
             <Box
-              display={"flex"}
-              flexDirection={"column"}
-              w={["100%", "50%", "50%"]}
-              pr={("0", "5", "5")}
+              overflow={"hidden"}
+              w={["100%", "48%", "48%"]}
+              boxShadow="base"
             >
-              <Image src={ElectricLaparoscopicCutting} />
-              <Text
-                fontSize={"xl"}
-                as={"h1"}
-                textOverflow={"ellipsis"}
-                overflow={"hidden"}
-                whiteSpace="nowrap"
+              <Box
+                _hover={{
+                  transform: "scale(1.1)",
+                  transition: " 0.8s all",
+                }}
               >
-                Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
-              </Text>
-              <Text>
-                Inheritance in the era of intelligent squeezing, a master of
-                scientific anastomosis and technology integration
-              </Text>
-              <Button
-                mb={["5", "5", "0"]}
-                w={["40%"]}
-                marginRight={["none", "none", "auto"]}
-                mt={"5"}
-                colorScheme="green"
-                borderRadius={"none"}
-                rightIcon={<ArrowForwardIcon />}
-              >
-                Read more
-              </Button>
+                <Image src={ElectricLaparoscopicCutting} />
+              </Box>
+
+              <Box p={"4"}>
+                <Text
+                  fontSize={"xl"}
+                  as={"h1"}
+                  textOverflow={"ellipsis"}
+                  overflow={"hidden"}
+                  whiteSpace="nowrap"
+                >
+                  Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
+                </Text>
+                <Text>
+                  Inheritance in the era of intelligent squeezing, a master of
+                  scientific anastomosis and technology integration
+                </Text>
+                <Button
+                  mb={["5", "5", "0"]}
+                  w={["60%"]}
+                  marginRight={["none", "none", "auto"]}
+                  mt={"5"}
+                  colorScheme="green"
+                  borderRadius={"none"}
+                  rightIcon={<ArrowForwardIcon />}
+                >
+                  Read more
+                </Button>
+              </Box>
             </Box>
             <Box
-              display={"flex"}
-              flexDirection={"column"}
-              w={["100%", "50%", "50%"]}
+              overflow={"hidden"}
+              w={["100%", "48%", "48%"]}
+              boxShadow="base"
             >
-              <Image src={ElectricLaparoscopicCutting} />
-              <Text
-                fontSize={"xl"}
-                as={"h1"}
-                textOverflow={"ellipsis"}
-                overflow={"hidden"}
-                whiteSpace="nowrap"
+              <Box
+                _hover={{
+                  transform: "scale(1.1)",
+                  transition: " 0.8s all",
+                }}
               >
-                Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
-              </Text>
-              <Text>
-                Inheritance in the era of intelligent squeezing, a master of
-                scientific anastomosis and technology integration
-              </Text>
-              <Button
-                mb={["5", "5", "0"]}
-                w={["40%"]}
-                marginRight={["none", "none", "auto"]}
-                mt={"5"}
-                colorScheme="green"
-                borderRadius={"none"}
-                rightIcon={<ArrowForwardIcon />}
-              >
-                Read more
-              </Button>
+                <Image src={ElectricLaparoscopicCutting} />
+              </Box>
+              <Box p="4">
+                <Text
+                  fontSize={"xl"}
+                  as={"h1"}
+                  textOverflow={"ellipsis"}
+                  overflow={"hidden"}
+                  whiteSpace="nowrap"
+                >
+                  Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
+                </Text>
+                <Text>
+                  Inheritance in the era of intelligent squeezing, a master of
+                  scientific anastomosis and technology integration
+                </Text>
+                <Button
+                  mb={["5", "5", "0"]}
+                  w={["60%"]}
+                  marginRight={["none", "none", "auto"]}
+                  mt={"5"}
+                  colorScheme="green"
+                  borderRadius={"none"}
+                  rightIcon={<ArrowForwardIcon />}
+                >
+                  Read more
+                </Button>
+              </Box>
             </Box>
-          </Box>
-        </Stack>
+          </Stack>
+        </Box>
       </Box>
     </Box>
   );
