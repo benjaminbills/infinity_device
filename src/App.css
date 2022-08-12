@@ -19,6 +19,9 @@ hr {
   width: 250px;
   height: 180px;
 }
+.no-margin {
+  margin-top: 0 !important;
+}
 @media screen and (max-width: 48em) {
   .map-container {
     width: 100%;
