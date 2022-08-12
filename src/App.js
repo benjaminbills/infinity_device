@@ -15,9 +15,10 @@ function App() {
     <ChakraProvider>
       <BrowserRouter>
         <Box h="100vh" display={"flex"} flexDir="column">
-          <Box p="5" color={"gray.600"}>
+          <Navbar />
+
+          <Box pt={"4em"} pl="5" pr="5" pb="5" color={"gray.600"}>
             <Container maxW="container.xl">
-              <Navbar />
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
