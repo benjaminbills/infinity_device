@@ -23,6 +23,7 @@ import { ArrowForwardIcon, PhoneIcon } from "@chakra-ui/icons";
 import Footer from "../components/Footer";
 import Map from "../components/Map";
 import { Link } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
 
 function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -54,14 +55,31 @@ function Home() {
     background: `url(https://media-exp1.licdn.com/dms/image/C5622AQGO1CFTOh72rQ/feedshare-shrink_2048_1536/0/1657853020613?e=1662595200&v=beta&t=zo2jxmrpH4Lje1U9L8VNVhitxML8pSccl0oZlWyEbfw) center/cover no-repeat`,
   };
   return (
-    <div pt={"5"} pb={"5"}>
-      <Stack
-        display={"flex"}
-        direction={["column-reverse", "row", "row"]}
-        pt="5"
-        pb="5"
+    <Box pb={"5"}>
+      <Carousel
+        autoPlay={true}
+        showThumbs={false}
+        showStatus={false}
+        showArrows={false}
       >
-        <Box w={["100%", "50%", "75%"]}>
+        <Box position={"relative"}>
+          <Image src={SmartPressElectric} />
+        </Box>
+        <Box position={"relative"}>
+          <Image src={disposableBurstPolymer} />
+        </Box>
+        <Box position={"relative"}>
+          <Image src={ElectricLaparoscopicCutting} />
+        </Box>
+      </Carousel>
+      <Container maxW="container.xl">
+        <Stack
+          display={"flex"}
+          direction={["column-reverse", "row", "row"]}
+          // pt="5"
+          pb="5"
+        >
+          {/* <Box w={["100%", "50%", "75%"]}>
           <Text fontSize={"4xl"} as={"h1"}>
             {" "}
             Better Pricing, <br /> Guaranteed
@@ -84,41 +102,41 @@ function Home() {
               <Image src={Apparatus} />
             </Box>
           </Container>
-        </Box>
-      </Stack>
-      <Box>
-        <Stack
-          direction={"row"}
-          justifyContent={"center"}
-          pt={"5"}
-          minH={"60px"}
-        >
-          <Wrap spacing={"5"} justify={"left"}>
-            <WrapItem>
-              <Box
-                display={"flex"}
-                border={"1px solid black"}
-                h={"30px"}
-                w={"80px"}
-              >
-                <Image src={hocer} />
-              </Box>
-            </WrapItem>
-            <WrapItem>
-              <Box
-                display={"flex"}
-                border={"1px solid black"}
-                h={"30px"}
-                w={"80px"}
-              >
-                <Image src={fengh} />
-              </Box>
-            </WrapItem>
-          </Wrap>
+        </Box> */}
         </Stack>
-      </Box>
-      <hr />
-      {/* <Stack
+        <Box>
+          <Stack
+            direction={"row"}
+            justifyContent={"center"}
+            pt={"5"}
+            minH={"60px"}
+          >
+            <Wrap spacing={"5"} justify={"left"}>
+              <WrapItem>
+                <Box
+                  display={"flex"}
+                  border={"1px solid black"}
+                  h={"30px"}
+                  w={"80px"}
+                >
+                  <Image src={hocer} />
+                </Box>
+              </WrapItem>
+              <WrapItem>
+                <Box
+                  display={"flex"}
+                  border={"1px solid black"}
+                  h={"30px"}
+                  w={"80px"}
+                >
+                  <Image src={fengh} />
+                </Box>
+              </WrapItem>
+            </Wrap>
+          </Stack>
+        </Box>
+        <hr />
+        {/* <Stack
         pt={"4%"}
         pb={"4%"}
         display={"flex"}
@@ -195,252 +213,255 @@ function Home() {
           </Box>
         </Stack>
       </Box> */}
-      <Stack
-        flexDir={["column", "column", "row"]}
-        pt={"5"}
-        pb={"10"}
-        rowGap={"5"}
-      >
-        <Box w={["100%", "100%", "50%"]}>
-          <Box position={"relative"} mb={"5"}>
-            <Text className="underline" fontSize={["2xl", "3xl"]} as={"h1"}>
-              Infinity Devices
-            </Text>
+        <Stack
+          flexDir={["column", "column", "row"]}
+          pt={"5"}
+          pb={"10"}
+          rowGap={"5"}
+        >
+          <Box w={["100%", "100%", "50%"]}>
+            <Box position={"relative"} mb={"5"}>
+              <Text className="underline" fontSize={["2xl", "3xl"]} as={"h1"}>
+                Infinity Devices
+              </Text>
+            </Box>
+            <Box pr={["none", "none", "8"]}>
+              <Text width={"100%"} textAlign={"justify"}>
+                Infinity Devices Africa Ltd, is a Company whose main focus is to
+                deliver technology driven solutions to a clinical problem via a
+                trio approach that encompasses the meeting of Clinical Need,
+                Market Appropriate Pricing and Value Creation.
+              </Text>
+            </Box>
+            <Link to="/about">
+              <Button
+                mt={"5"}
+                colorScheme="teal"
+                borderRadius={"none"}
+                variant="outline"
+                rightIcon={<ArrowForwardIcon />}
+              >
+                Read more
+              </Button>
+            </Link>
           </Box>
-          <Box pr={["none", "none", "8"]}>
-            <Text width={"100%"} textAlign={"justify"}>
-              Infinity Devices Africa Ltd, is a Company whose main focus is to
-              deliver technology driven solutions to a clinical problem via a
-              trio approach that encompasses the meeting of Clinical Need,
-              Market Appropriate Pricing and Value Creation.
-            </Text>
+          <Box w={["100%", "100%", "50%"]} display={"flex"}>
+            <Image src={landing} />
           </Box>
-          <Link to="/about">
+        </Stack>
+        <Box
+          mb={"10"}
+          display={"flex"}
+          flexDir={"column"}
+          sx={basicBoxStyles}
+          filter="auto"
+          brightness="80%"
+        >
+          <Text>
+            Walk with excellence, grow together with minimally invasive surgery
+            - a Chinese-style solution for the integration of minimally invasive
+            surgery
+          </Text>
+          <Link to={"/catalog"}>
             <Button
               mt={"5"}
-              colorScheme="teal"
+              colorScheme="green"
               borderRadius={"none"}
-              variant="outline"
               rightIcon={<ArrowForwardIcon />}
             >
-              Read more
+              View Catalog
             </Button>
           </Link>
         </Box>
-        <Box w={["100%", "100%", "50%"]} display={"flex"}>
-          <Image src={landing} />
-        </Box>
-      </Stack>
-      <Box
-        mb={"10"}
-        display={"flex"}
-        flexDir={"column"}
-        sx={basicBoxStyles}
-        filter="auto"
-        brightness="80%"
-      >
-        <Text>
-          Walk with excellence, grow together with minimally invasive surgery -
-          a Chinese-style solution for the integration of minimally invasive
-          surgery
-        </Text>
-        <Link to={"/catalog"}>
-          <Button
-            mt={"5"}
-            colorScheme="green"
-            borderRadius={"none"}
-            rightIcon={<ArrowForwardIcon />}
-          >
-            View Catalog
-          </Button>
-        </Link>
-      </Box>
-      <Stack flexDir={"column"} pb={"10"}>
-        <Box
-          display={"flex"}
-          flexDir={["column", "column", "row"]}
-          pt={["0", "0", "0"]}
-        >
+        <Stack flexDir={"column"} pb={"10"}>
           <Box
             display={"flex"}
-            flexDir={"column"}
-            w={["100%", "100%", "40%"]}
-            textAlign={["left", "left", "right"]}
+            flexDir={["column", "column", "row"]}
+            pt={["0", "0", "0"]}
           >
-            <Text fontSize={"xl"} as={"h1"}>
-              New Lunar® Disposable Fully Electric Laparoscopic Cutting Stapler
-            </Text>
-            <Box>
-              <Text>
-                Inheritance in the era of intelligent squeezing, a master of
-                scientific anastomosis and technology integration
-              </Text>
-            </Box>
-
-            <Button
-              mb={["5", "5", "0"]}
-              w={["40%"]}
-              marginLeft={["none", "none", "auto"]}
-              mt={"5"}
-              colorScheme="green"
-              borderRadius={"none"}
-              rightIcon={<ArrowForwardIcon />}
+            <Box
+              display={"flex"}
+              flexDir={"column"}
+              w={["100%", "100%", "40%"]}
+              textAlign={["left", "left", "right"]}
             >
-              Read more
-            </Button>
-          </Box>
-          <Box
-            display={"flex"}
-            w={["100%", "100%", "60%"]}
-            pl={["0", "0", "10"]}
-            _hover={{
-              transform: "scale(1.1)",
-              transition: " 0.8s all",
-            }}
-          >
-            <Image src={ElectricLaparoscopicCutting} />
-          </Box>
-        </Box>
-        <Box
-          display={"flex"}
-          flexDir={["column-reverse", "column-reverse", "row"]}
-          pt={["0", "0", "10"]}
-        >
-          <Box
-            display={"flex"}
-            w={["100%", "100%", "60%"]}
-            pr={["0", "0", "10"]}
-            _hover={{
-              transform: "scale(1.1)",
-              transition: " 0.8s all",
-            }}
-          >
-            <Image src={disposableBurstPolymer} />
-          </Box>
-          <Box
-            display={"flex"}
-            flexDir={"column"}
-            w={["100%", "100%", "40%"]}
-            textAlign={["left", "left", "left"]}
-          >
-            <Text fontSize={"xl"} as={"h1"}>
-              Second Lunar® Disposable Fully Electric Laparoscopic Cutting
-              Stapler
-            </Text>
-            <Box>
-              <Text>
-                Inheritance in the era of intelligent squeezing, a master of
-                scientific anastomosis and technology integration
+              <Text fontSize={"xl"} as={"h1"}>
+                New Lunar® Disposable Fully Electric Laparoscopic Cutting
+                Stapler
               </Text>
-            </Box>
+              <Box>
+                <Text>
+                  Inheritance in the era of intelligent squeezing, a master of
+                  scientific anastomosis and technology integration
+                </Text>
+              </Box>
 
-            <Button
-              mb={["5", "5", "0"]}
-              w={["40%"]}
-              marginRight={["none", "none", "auto"]}
-              mt={"5"}
-              colorScheme="green"
-              borderRadius={"none"}
-              rightIcon={<ArrowForwardIcon />}
+              <Button
+                mb={["5", "5", "0"]}
+                w={["40%"]}
+                marginLeft={["none", "none", "auto"]}
+                mt={"5"}
+                colorScheme="green"
+                borderRadius={"none"}
+                rightIcon={<ArrowForwardIcon />}
+              >
+                Read more
+              </Button>
+            </Box>
+            <Box
+              display={"flex"}
+              w={["100%", "100%", "60%"]}
+              pl={["0", "0", "10"]}
+              _hover={{
+                transform: "scale(1.1)",
+                transition: " 0.8s all",
+              }}
             >
-              Read more
-            </Button>
+              <Image src={ElectricLaparoscopicCutting} />
+            </Box>
           </Box>
-        </Box>
-        <Box
-          display={"flex"}
-          flexDir={["column", "column", "row"]}
-          pt={["0", "0", "10"]}
-        >
           <Box
             display={"flex"}
-            flexDir={"column"}
-            w={["100%", "100%", "40%"]}
-            textAlign={["left", "left", "right"]}
+            flexDir={["column-reverse", "column-reverse", "row"]}
+            pt={["0", "0", "10"]}
           >
-            <Text fontSize={"xl"} as={"h1"}>
-              New Lunar® Disposable Fully Electric Laparoscopic Cutting Stapler
-            </Text>
-            <Box>
-              <Text>
-                Inheritance in the era of intelligent squeezing, a master of
-                scientific anastomosis and technology integration
+            <Box
+              display={"flex"}
+              w={["100%", "100%", "60%"]}
+              pr={["0", "0", "10"]}
+              _hover={{
+                transform: "scale(1.1)",
+                transition: " 0.8s all",
+              }}
+            >
+              <Image src={disposableBurstPolymer} />
+            </Box>
+            <Box
+              display={"flex"}
+              flexDir={"column"}
+              w={["100%", "100%", "40%"]}
+              textAlign={["left", "left", "left"]}
+            >
+              <Text fontSize={"xl"} as={"h1"}>
+                Second Lunar® Disposable Fully Electric Laparoscopic Cutting
+                Stapler
               </Text>
-            </Box>
+              <Box>
+                <Text>
+                  Inheritance in the era of intelligent squeezing, a master of
+                  scientific anastomosis and technology integration
+                </Text>
+              </Box>
 
-            <Button
-              mb={["5", "5", "0"]}
-              w={["40%"]}
-              marginLeft={["none", "none", "auto"]}
-              mt={"5"}
-              colorScheme="green"
-              borderRadius={"none"}
-              rightIcon={<ArrowForwardIcon />}
+              <Button
+                mb={["5", "5", "0"]}
+                w={["40%"]}
+                marginRight={["none", "none", "auto"]}
+                mt={"5"}
+                colorScheme="green"
+                borderRadius={"none"}
+                rightIcon={<ArrowForwardIcon />}
+              >
+                Read more
+              </Button>
+            </Box>
+          </Box>
+          <Box
+            display={"flex"}
+            flexDir={["column", "column", "row"]}
+            pt={["0", "0", "10"]}
+          >
+            <Box
+              display={"flex"}
+              flexDir={"column"}
+              w={["100%", "100%", "40%"]}
+              textAlign={["left", "left", "right"]}
             >
-              Read more
-            </Button>
-          </Box>
-          <Box
-            display={"flex"}
-            w={["100%", "100%", "60%"]}
-            pl={["0", "0", "10"]}
-            _hover={{
-              transform: "scale(1.1)",
-              transition: " 0.8s all",
-            }}
-          >
-            <Image src={SmartPressElectric} />
-          </Box>
-        </Box>
-        <Box
-          display={"flex"}
-          flexDir={["column-reverse", "column-reverse", "row"]}
-          pt={["0", "0", "10"]}
-        >
-          <Box
-            display={"flex"}
-            w={["100%", "100%", "60%"]}
-            pr={["0", "0", "10"]}
-            _hover={{
-              transform: "scale(1.1)",
-              transition: " 0.8s all",
-            }}
-          >
-            <Image src={Hocer} />
-          </Box>
-          <Box
-            display={"flex"}
-            flexDir={"column"}
-            w={["100%", "100%", "40%"]}
-            textAlign={["left", "left", "left"]}
-          >
-            <Text fontSize={"xl"} as={"h1"}>
-              Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
-            </Text>
-            <Box>
-              <Text>
-                Inheritance in the era of intelligent squeezing, a master of
-                scientific anastomosis and technology integration
+              <Text fontSize={"xl"} as={"h1"}>
+                New Lunar® Disposable Fully Electric Laparoscopic Cutting
+                Stapler
               </Text>
-            </Box>
+              <Box>
+                <Text>
+                  Inheritance in the era of intelligent squeezing, a master of
+                  scientific anastomosis and technology integration
+                </Text>
+              </Box>
 
-            <Button
-              mb={["5", "5", "0"]}
-              w={["40%"]}
-              marginRight={["none", "none", "auto"]}
-              mt={"5"}
-              colorScheme="green"
-              borderRadius={"none"}
-              rightIcon={<ArrowForwardIcon />}
+              <Button
+                mb={["5", "5", "0"]}
+                w={["40%"]}
+                marginLeft={["none", "none", "auto"]}
+                mt={"5"}
+                colorScheme="green"
+                borderRadius={"none"}
+                rightIcon={<ArrowForwardIcon />}
+              >
+                Read more
+              </Button>
+            </Box>
+            <Box
+              display={"flex"}
+              w={["100%", "100%", "60%"]}
+              pl={["0", "0", "10"]}
+              _hover={{
+                transform: "scale(1.1)",
+                transition: " 0.8s all",
+              }}
             >
-              Read more
-            </Button>
+              <Image src={SmartPressElectric} />
+            </Box>
           </Box>
-        </Box>
-      </Stack>
-      {/* <Map /> */}
-      {/* <Footer /> */}
-    </div>
+          <Box
+            display={"flex"}
+            flexDir={["column-reverse", "column-reverse", "row"]}
+            pt={["0", "0", "10"]}
+          >
+            <Box
+              display={"flex"}
+              w={["100%", "100%", "60%"]}
+              pr={["0", "0", "10"]}
+              _hover={{
+                transform: "scale(1.1)",
+                transition: " 0.8s all",
+              }}
+            >
+              <Image src={Hocer} />
+            </Box>
+            <Box
+              display={"flex"}
+              flexDir={"column"}
+              w={["100%", "100%", "40%"]}
+              textAlign={["left", "left", "left"]}
+            >
+              <Text fontSize={"xl"} as={"h1"}>
+                Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
+              </Text>
+              <Box>
+                <Text>
+                  Inheritance in the era of intelligent squeezing, a master of
+                  scientific anastomosis and technology integration
+                </Text>
+              </Box>
+
+              <Button
+                mb={["5", "5", "0"]}
+                w={["40%"]}
+                marginRight={["none", "none", "auto"]}
+                mt={"5"}
+                colorScheme="green"
+                borderRadius={"none"}
+                rightIcon={<ArrowForwardIcon />}
+              >
+                Read more
+              </Button>
+            </Box>
+          </Box>
+        </Stack>
+        {/* <Map /> */}
+        {/* <Footer /> */}
+      </Container>
+    </Box>
   );
 }
 

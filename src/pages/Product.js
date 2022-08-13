@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Container,
   Image,
   ListItem,
   Stack,
@@ -15,51 +16,53 @@ import { Link } from "react-router-dom";
 
 function Product() {
   return (
-    <Stack pt="10" w="100%" flexDir={["column", "row", "row"]}>
-      <Box w={["100%", "50%", "50%"]}>
-        <Carousel
-          autoPlay
-          showThumbs={true}
-          showStatus={false}
-          showArrows={false}
-          thumbWidth={100}
-          swipeable={true}
-          emulateTouch={true}
-        >
-          <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
-
-          <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
-          <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
-
-          <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
-          <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
-
-          <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
-        </Carousel>
-      </Box>
-      <Box pl={["0", "5"]} w={["100%", "50%", "50%"]} className="no-margin">
-        <Text fontSize={"xl"} as={"h1"}>
-          Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
-        </Text>
-        <Text fontSize={"l"}>Product description:</Text>
-        <UnorderedList>
-          <ListItem>Lorem ipsum dolor sit amet</ListItem>
-          <ListItem>Consectetur adipiscing elit</ListItem>
-          <ListItem>Integer molestie lorem at massa</ListItem>
-          <ListItem>Facilisis in pretium nisl aliquet</ListItem>
-        </UnorderedList>
-        <Link to="/contact">
-          <Button
-            mt={"5"}
-            colorScheme="teal"
-            borderRadius={"none"}
-            variant="outline"
+    <Container maxW="container.xl">
+      <Stack pt="10" w="100%" flexDir={["column", "row", "row"]}>
+        <Box w={["100%", "50%", "50%"]}>
+          <Carousel
+            autoPlay
+            showThumbs={true}
+            showStatus={false}
+            showArrows={false}
+            thumbWidth={100}
+            swipeable={true}
+            emulateTouch={true}
           >
-            Contact Us
-          </Button>
-        </Link>
-      </Box>
-    </Stack>
+            <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
+
+            <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
+            <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
+
+            <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
+            <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
+
+            <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
+          </Carousel>
+        </Box>
+        <Box pl={["0", "5"]} w={["100%", "50%", "50%"]} className="no-margin">
+          <Text fontSize={"xl"} as={"h1"}>
+            Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
+          </Text>
+          <Text fontSize={"l"}>Product description:</Text>
+          <UnorderedList>
+            <ListItem>Lorem ipsum dolor sit amet</ListItem>
+            <ListItem>Consectetur adipiscing elit</ListItem>
+            <ListItem>Integer molestie lorem at massa</ListItem>
+            <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+          </UnorderedList>
+          <Link to="/contact">
+            <Button
+              mt={"5"}
+              colorScheme="teal"
+              borderRadius={"none"}
+              variant="outline"
+            >
+              Contact Us
+            </Button>
+          </Link>
+        </Box>
+      </Stack>
+    </Container>
   );
 }
 

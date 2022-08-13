@@ -16,17 +16,16 @@ function App() {
       <BrowserRouter>
         <Box h="100vh" display={"flex"} flexDir="column">
           <Navbar />
-
-          <Box pt={"4em"} pl="5" pr="5" pb="5" color={"gray.600"}>
-            <Container maxW="container.xl">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/catalog" element={<Catalog />} />
-                <Route path="/product/:id" element={<Product />} />
-              </Routes>
-            </Container>
+          <Box pt={"4em"} color={"gray.600"}>
+            {/* <Container maxW="container.xl"> */}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/catalog" element={<Catalog />} />
+              <Route path="/product/:id" element={<Product />} />
+            </Routes>
+            {/* </Container> */}
           </Box>
           <Footer />
         </Box>
