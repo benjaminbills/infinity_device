@@ -13,13 +13,11 @@ import ElectricLaparoscopicCutting from "../assets/images/ElectricLaparoscopicCu
 
 import Clip from "../assets/images/clip.jpeg";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 function Catalog() {
   return (
     <Box>
-      <Box>
-        <Image src={Clip} />
-      </Box>
-      <Box pt="10" pb="10">
+      <Box pt="5" pb="10">
         <Center>
           <Text fontSize={["2xl", "3xl"]} as={"h1"}>
             Catalog
@@ -60,17 +58,19 @@ function Catalog() {
                   Inheritance in the era of intelligent squeezing, a master of
                   scientific anastomosis and technology integration
                 </Text>
-                <Button
-                  mb={["5", "5", "0"]}
-                  w={["60%"]}
-                  marginRight={["none", "none", "auto"]}
-                  mt={"5"}
-                  colorScheme="green"
-                  borderRadius={"none"}
-                  rightIcon={<ArrowForwardIcon />}
-                >
-                  Read more
-                </Button>
+                <Link to="/product/2">
+                  <Button
+                    mb={["5", "5", "0"]}
+                    w={["60%"]}
+                    marginRight={["none", "none", "auto"]}
+                    mt={"5"}
+                    colorScheme="green"
+                    borderRadius={"none"}
+                    rightIcon={<ArrowForwardIcon />}
+                  >
+                    Read more
+                  </Button>
+                </Link>
               </Box>
             </Box>
             <Box
@@ -100,21 +100,28 @@ function Catalog() {
                   Inheritance in the era of intelligent squeezing, a master of
                   scientific anastomosis and technology integration
                 </Text>
-                <Button
-                  mb={["5", "5", "0"]}
-                  w={["60%"]}
-                  marginRight={["none", "none", "auto"]}
-                  mt={"5"}
-                  colorScheme="green"
-                  borderRadius={"none"}
-                  rightIcon={<ArrowForwardIcon />}
-                >
-                  Read more
-                </Button>
+                <Link to="/product/2">
+                  <Button
+                    mb={["5", "5", "0"]}
+                    w={["60%"]}
+                    marginRight={["none", "none", "auto"]}
+                    mt={"5"}
+                    colorScheme="green"
+                    borderRadius={"none"}
+                    rightIcon={<ArrowForwardIcon />}
+                  >
+                    Read more
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Stack>
         </Box>
+        <Center pt="10">
+          <Button colorScheme="green" borderRadius={"none"} variant="outline">
+            Download Our Catalog
+          </Button>
+        </Center>
       </Box>
     </Box>
   );
