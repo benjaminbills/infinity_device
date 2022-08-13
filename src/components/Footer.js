@@ -64,7 +64,7 @@ function Footer() {
               Company Address: Elgon Court D2, Ralph Bunche Road, Upperhill
             </Text>
             <Text mb={"2"}>Contact Number:0706731683, 0734329563</Text>
-            <Text mb={"2"}>Email:infinitydevices.com</Text>
+            <Text mb={"2"}>Email:info@infinitydevices.com</Text>
             <FormControl>
               <FormLabel>Get notified when we add new products</FormLabel>
               <InputGroup color={"white"} w={["100%", "100%", "50%"]} size="md">
