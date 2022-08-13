@@ -263,14 +263,16 @@ function Home() {
           a Chinese-style solution for the integration of minimally invasive
           surgery
         </Text>
-        <Button
-          mt={"5"}
-          colorScheme="green"
-          borderRadius={"none"}
-          rightIcon={<ArrowForwardIcon />}
-        >
-          View Our Catalog
-        </Button>{" "}
+        <Link to={"/catalog"}>
+          <Button
+            mt={"5"}
+            colorScheme="green"
+            borderRadius={"none"}
+            rightIcon={<ArrowForwardIcon />}
+          >
+            View Catalog
+          </Button>
+        </Link>
       </Box>
       <Stack flexDir={"column"} pb={"10"}>
         <Box
