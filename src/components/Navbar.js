@@ -69,7 +69,7 @@ function Navbar() {
   // );
   return (
     <Box position={"fixed"} color={"gray.600"} top={"0"} w={"100%"} zIndex="20">
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box bg={useColorModeValue("gray.100", "gray.900")}>
         <Container maxW="container.xl">
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <IconButton
