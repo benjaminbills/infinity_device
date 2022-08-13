@@ -61,6 +61,13 @@ function Home() {
         showThumbs={false}
         showStatus={false}
         showArrows={false}
+        infiniteLoop={true}
+        stopOnHover={true}
+        swipeable={true}
+        dynamicHeight={true}
+        emulateTouch={true}
+        transitionTime={500}
+        interval={6000}
       >
         <Box position={"relative"}>
           <Image src={SmartPressElectric} />
