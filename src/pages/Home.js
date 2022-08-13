@@ -17,10 +17,7 @@ import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import hocer from "../assets/images/hocerlogo.png";
 import fengh from "../assets/images/fengh.jpeg";
-import nairobihospital from "../assets/images/nairobihospital.png";
-import kenyatta from "../assets/images/kenyatta.png";
 import landing from "../assets/images/landing.jpg";
-import surgeryroom from "../assets/images/surgeryroom.jpeg";
 import disposableBurstPolymer from "../assets/images/DisposableBurstClip.png";
 import ElectricLaparoscopicCutting from "../assets/images/ElectricLaparoscopicCutting.jpeg";
 import SmartPressElectric from "../assets/images/SmartPressElectric.jpeg";
@@ -121,17 +118,6 @@ function Home() {
               >
                 <Image src={fengh} />
               </Box>
-            </WrapItem>
-            <WrapItem>
-              <Box
-                display={"flex"}
-                justifyContent={"center"}
-                border={"1px solid black"}
-                h={"30px"}
-                w={"60px"}
-              >
-                <Image src={nairobihospital} />
-              </Box>{" "}
             </WrapItem>
           </Wrap>
         </Stack>
