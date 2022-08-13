@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 function Product() {
   return (
-    <Stack w="100%" flexDir={["column", "row", "row"]}>
+    <Stack pt="10" w="100%" flexDir={["column", "row", "row"]}>
       <Box w={["100%", "50%", "50%"]}>
         <Carousel
           autoPlay
@@ -37,7 +37,7 @@ function Product() {
           <img src={disposableBurstPolymer} alt="disposableBurstPolymer" />
         </Carousel>
       </Box>
-      <Box pl={["0", "5"]} w={["100%", "50%", "50%"]}>
+      <Box pl={["0", "5"]} w={["100%", "50%", "50%"]} className="no-margin">
         <Text fontSize={"xl"} as={"h1"}>
           Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
         </Text>
