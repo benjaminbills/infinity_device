@@ -1,19 +1,14 @@
 import {
   Box,
   Button,
-  Center,
   Container,
-  HStack,
   Image,
-  Input,
   Stack,
   Text,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Carousel } from "react-responsive-carousel";
-import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import hocer from "../assets/images/hocerlogo.png";
 import fengh from "../assets/images/fengh.jpeg";
