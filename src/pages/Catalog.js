@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import ElectricLaparoscopicCutting from "../assets/images/ElectricLaparoscopicCutting.jpeg";
-
+import { Products } from "../Products";
 import Clip from "../assets/images/clip.jpeg";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
@@ -39,57 +39,61 @@ function Catalog() {
               Catalog
             </Text>
           </Center>
-          <Box>
-            <Stack
-              pt={"5"}
-              spacing={"4%"}
-              display={"flex"}
-              direction={["column", "row", "row"]}
-            >
-              <Box
-                overflow={"hidden"}
-                w={["100%", "48%", "48%"]}
-                boxShadow="base"
+          <Center>
+            <Box>
+              <Wrap
+                pt={"5"}
+                spacing={"20px"}
+                // display={"flex"}
+                // direction={["column", "column", "row"]}
               >
-                <Box
-                  _hover={{
-                    transform: "scale(1.1)",
-                    transition: " 0.8s all",
-                  }}
-                >
-                  <Image src={ElectricLaparoscopicCutting} />
-                </Box>
-
-                <Box p={"4"}>
-                  <Text
-                    fontSize={"xl"}
-                    as={"h1"}
-                    textOverflow={"ellipsis"}
+                {Products.map((product) => (
+                  <WrapItem
+                    key={product.id}
                     overflow={"hidden"}
-                    whiteSpace="nowrap"
+                    maxW={["100%", "70em", "35em"]}
+                    boxShadow="base"
                   >
-                    Hocer Disposable Fully Electric Laparoscopic Cutting Stapler
-                  </Text>
-                  <Text>
-                    Inheritance in the era of intelligent squeezing, a master of
-                    scientific anastomosis and technology integration
-                  </Text>
-                  <Link to="/product/2">
-                    <Button
-                      mb={["5", "5", "0"]}
-                      w={["60%"]}
-                      marginRight={["none", "none", "auto"]}
-                      mt={"5"}
-                      colorScheme="green"
-                      borderRadius={"none"}
-                      rightIcon={<ArrowForwardIcon />}
-                    >
-                      Read more
-                    </Button>
-                  </Link>
-                </Box>
-              </Box>
-              <Box
+                    <Box display={"flex"} flexDir={"column"}>
+                      <Box
+                        _hover={{
+                          transform: "scale(1.1)",
+                          transition: " 0.8s all",
+                        }}
+                      >
+                        <Image src={product.images[0]} />
+                      </Box>
+
+                      <Box p={"4"}>
+                        <Text
+                          fontSize={"xl"}
+                          as={"h1"}
+                          textOverflow={"ellipsis"}
+                          overflow={"hidden"}
+                          whiteSpace="nowrap"
+                        >
+                          {product.title}
+                        </Text>
+                        <Text>{product.description}</Text>
+                        <Link to={`/product/${product.id}`}>
+                          <Button
+                            mb={["5", "5", "0"]}
+                            w={["60%"]}
+                            marginRight={["none", "none", "auto"]}
+                            mt={"5"}
+                            colorScheme="green"
+                            borderRadius={"none"}
+                            rightIcon={<ArrowForwardIcon />}
+                          >
+                            Read more
+                          </Button>
+                        </Link>
+                      </Box>
+                    </Box>
+                  </WrapItem>
+                ))}
+
+                {/* <Box
                 overflow={"hidden"}
                 w={["100%", "48%", "48%"]}
                 boxShadow="base"
@@ -130,9 +134,10 @@ function Catalog() {
                     </Button>
                   </Link>
                 </Box>
-              </Box>
-            </Stack>
-          </Box>
+              </Box> */}
+              </Wrap>
+            </Box>
+          </Center>
           <Center pt="10">
             {/* <Link to={"/"}> */}
             <Button
