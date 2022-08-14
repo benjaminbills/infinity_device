@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Center,
+  Container,
   FormControl,
   FormLabel,
   Icon,
@@ -38,78 +39,81 @@ function Contact() {
     fontSize: "20px",
   };
   return (
-    <Box pt="10" pb="10">
-      <Center>
-        <Text fontSize={["2xl", "3xl"]} as={"h1"}>
-          Contact Us
-        </Text>
-      </Center>
-      <Box
-        display={"flex"}
-        h={"auto"}
-        flexDir={["column", "column", "row"]}
-        boxShadow="base"
-      >
+    <Container maxW="container.xl">
+      <Box pt="10" pb="10">
+        <Center>
+          <Text fontSize={["2xl", "3xl"]} as={"h1"}>
+            Contact Us
+          </Text>
+        </Center>
         <Box
-          h={"500px"}
-          w={["100%", "100%", "40%"]}
           display={"flex"}
-          flexDir={"column"}
-          sx={basicBoxStyles}
-          filter="grayscale(80%)"
-          brightness="50%"
+          h={"auto"}
+          flexDir={["column", "column", "row"]}
+          boxShadow="base"
         >
-          {" "}
           <Box
+            h={"500px"}
+            w={["100%", "100%", "40%"]}
+            display={"flex"}
             flexDir={"column"}
-            w={"100%"}
-            h={"100%"}
-            sx={innerBoxStyles}
-            backdropFilter="auto"
-            backdropBlur="2px"
+            sx={basicBoxStyles}
+            filter="grayscale(80%)"
+            brightness="50%"
           >
-            <Box p="4">
-              <Text mb={"1"}>
-                <Icon as={GoLocation} mr={"2"} />
-                Elgon Court Apartment D2, Ralph Bunche Road
-              </Text>
-              <Text mb={"1"}>
-                <Icon as={FiPhoneCall} mr={"2"} />
-                0743156011, 0743156011
-              </Text>
-              <Text mb={"1"}>
-                {" "}
-                <Icon as={MdOutlineEmail} mr={"2"} /> infinitydevices@gmail.com
-              </Text>
+            {" "}
+            <Box
+              flexDir={"column"}
+              w={"100%"}
+              h={"100%"}
+              sx={innerBoxStyles}
+              backdropFilter="auto"
+              backdropBlur="2px"
+            >
+              <Box p="4">
+                <Text mb={"1"}>
+                  <Icon as={GoLocation} mr={"2"} />
+                  Elgon Court Apartment D2, Ralph Bunche Road
+                </Text>
+                <Text mb={"1"}>
+                  <Icon as={FiPhoneCall} mr={"2"} />
+                  0743156011, 0743156011
+                </Text>
+                <Text mb={"1"}>
+                  {" "}
+                  <Icon as={MdOutlineEmail} mr={"2"} />{" "}
+                  infinitydevices@gmail.com
+                </Text>
+              </Box>
             </Box>
           </Box>
-        </Box>
-        <Box p={["4", "4", "4"]} w={["100%", "100%", "60%"]}>
-          <FormControl isRequired>
-            <FormLabel>Name</FormLabel>
-            <Input type={"text"} placeholder="Please enter your name" />
-          </FormControl>
-          <FormControl isRequired>
-            <FormLabel>Email</FormLabel>
-            <Input type={"email"} placeholder="you@gmail.com" />
-          </FormControl>
-          <FormControl isRequired>
-            <FormLabel>Phone</FormLabel>
-            <Input
-              type={"phone"}
-              placeholder="Please enter your phone number"
-            />
-          </FormControl>
-          <FormControl>
-            <FormLabel>Message</FormLabel>
-            <Textarea type={"text"} placeholder="you@gmail.com" />
-          </FormControl>
-          <Button colorScheme={"green"} mt={"4"}>
-            Submit
-          </Button>
+          <Box p={["4", "4", "4"]} w={["100%", "100%", "60%"]}>
+            <FormControl isRequired>
+              <FormLabel>Name</FormLabel>
+              <Input type={"text"} placeholder="Please enter your name" />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Email</FormLabel>
+              <Input type={"email"} placeholder="you@gmail.com" />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Phone</FormLabel>
+              <Input
+                type={"phone"}
+                placeholder="Please enter your phone number"
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Message</FormLabel>
+              <Textarea type={"text"} placeholder="you@gmail.com" />
+            </FormControl>
+            <Button colorScheme={"green"} mt={"4"}>
+              Submit
+            </Button>
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </Container>
   );
 }
 
