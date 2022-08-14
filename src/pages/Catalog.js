@@ -16,6 +16,20 @@ import Clip from "../assets/images/clip.jpeg";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 function Catalog() {
+  const downloadCatalog = () => {
+    fetch(
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660500144/InfinityDevices/Documents/infinity_devices_catalog_m2mle8.pdf"
+    ).then((res) => {
+      res.blob().then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "infinity_devices_catalog.pdf";
+        alink.click();
+      });
+    });
+  };
   return (
     <Container maxW="container.xl">
       <Box>
@@ -120,9 +134,16 @@ function Catalog() {
             </Stack>
           </Box>
           <Center pt="10">
-            <Button colorScheme="green" borderRadius={"none"} variant="outline">
+            {/* <Link to={"/"}> */}
+            <Button
+              colorScheme="green"
+              borderRadius={"none"}
+              variant="outline"
+              onClick={downloadCatalog}
+            >
               Download Our Catalog
             </Button>
+            {/* </Link> */}
           </Center>
         </Box>
       </Box>
