@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Box,
   Button,
   Container,
@@ -10,13 +11,15 @@ import {
   Input,
   InputGroup,
   InputRightElement,
+  Menu,
+  MenuButton,
   Spacer,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo.jpeg";
 import Map from "./Map";
 function Footer() {
   const emailRef = useRef();
@@ -29,9 +32,17 @@ function Footer() {
         <Stack flexDir={"column"}>
           <Box display={"flex"}>
             <Box display={"flex"}>
-              <Box ml={"1"} background={"white"} w="30px" borderRadius={"full"}>
-                <Image boxSize="30px" src={Logo} alt="infinity devices" />
-              </Box>
+              <Menu>
+                <MenuButton
+                  as={Button}
+                  rounded={"full"}
+                  variant={"link"}
+                  cursor={"pointer"}
+                  minW={0}
+                >
+                  <Avatar size={"sm"} src={Logo} />
+                </MenuButton>
+              </Menu>
               <Text as={"h1"} fontSize="2xl" ml={"2"}>
                 Infinity Devices
               </Text>
