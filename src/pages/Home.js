@@ -83,7 +83,7 @@ function Home() {
         <Stack
           display={"flex"}
           direction={["column-reverse", "row", "row"]}
-          // pt="5"
+          pt="10"
           pb="5"
         >
           <Box w={["100%", "50%", "75%"]}>
