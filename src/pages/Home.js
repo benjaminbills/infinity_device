@@ -52,11 +52,11 @@ function Home() {
     px: 4,
     // background:
     //   "url(https://picsum.photos/id/1080/200/300) center/cover no-repeat",
-    background: `url(https://media-exp1.licdn.com/dms/image/C5622AQGO1CFTOh72rQ/feedshare-shrink_2048_1536/0/1657853020613?e=1662595200&v=beta&t=zo2jxmrpH4Lje1U9L8VNVhitxML8pSccl0oZlWyEbfw) center/cover no-repeat`,
+    background: `url(https://res.cloudinary.com/dd2y96zp9/image/upload/v1660521925/InfinityDevices/Assest/surgeryroom_zfadf6.jpg) center/cover no-repeat`,
   };
   return (
     <Box pb={"5"}>
-      <Carousel
+      {/* <Carousel
         autoPlay={true}
         showThumbs={false}
         showStatus={false}
@@ -78,7 +78,7 @@ function Home() {
         <Box position={"relative"}>
           <Image src={ElectricLaparoscopicCutting} />
         </Box>
-      </Carousel>
+      </Carousel> */}
       <Container maxW="container.xl">
         <Stack
           display={"flex"}
@@ -86,30 +86,30 @@ function Home() {
           // pt="5"
           pb="5"
         >
-          {/* <Box w={["100%", "50%", "75%"]}>
-          <Text fontSize={"4xl"} as={"h1"}>
-            {" "}
-            Better Pricing, <br /> Guaranteed
-          </Text>
-          <Text pb={"5"}>
-            We journey with you everyday and each with us is a gift
-          </Text>
-          <Button
-            rightIcon={<ArrowForwardIcon />}
-            colorScheme="teal"
-            variant="outline"
-            borderRadius={"none"}
-          >
-            View Catalog
-          </Button>
-        </Box>
-        <Box w={["100%", "50%", "25%"]}>
-          <Container display={"flex"} flexDir="column">
-            <Box position={"relative"}>
-              <Image src={Apparatus} />
-            </Box>
-          </Container>
-        </Box> */}
+          <Box w={["100%", "50%", "75%"]}>
+            <Text fontSize={"4xl"} as={"h1"}>
+              {" "}
+              Better Pricing, <br /> Guaranteed
+            </Text>
+            <Text pb={"5"}>
+              We journey with you everyday and each day with you is a gift.
+            </Text>
+            <Button
+              rightIcon={<ArrowForwardIcon />}
+              colorScheme="teal"
+              variant="outline"
+              borderRadius={"none"}
+            >
+              View Catalog
+            </Button>
+          </Box>
+          <Box w={["100%", "50%", "25%"]}>
+            <Container display={"flex"} flexDir="column">
+              <Box position={"relative"}>
+                <Image src={Apparatus} />
+              </Box>
+            </Container>
+          </Box>
         </Stack>
         <Box>
           <Stack
@@ -265,8 +265,8 @@ function Home() {
           brightness="80%"
         >
           <Text>
-            Walk with excellence, grow together with minimally invasive surgery
-            - a Chinese-style solution for the integration of minimally invasive
+            Walk with excellence,grow together with minimally invasive surgery -
+            a Kenyan- style solution for the integration of minimally invasive
             surgery
           </Text>
           <Link to={"/catalog"}>
