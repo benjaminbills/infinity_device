@@ -61,7 +61,7 @@ function Catalog() {
                           transition: " 0.8s all",
                         }}
                       >
-                        <Image src={product.images[0]} />
+                        <Image src={product.images[0]} maxH={"300px"} />
                       </Box>
 
                       <Box p={"4"}>
