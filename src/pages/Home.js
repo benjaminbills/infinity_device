@@ -298,29 +298,30 @@ function Home() {
               </Text>
               <Box>
                 <Text>
-                  Inheritance in the era of intelligent squeezing, a master of
-                  scientific anastomosis and technology integration
+                  The 1st surgical stapler in the industry with recommended and
+                  standardized 15 seconds pre-compression
                 </Text>
               </Box>
-
-              <Button
-                mb={["5", "5", "0"]}
-                w={["40%"]}
-                marginLeft={["none", "none", "auto"]}
-                mt={"5"}
-                colorScheme="green"
-                borderRadius={"none"}
-                rightIcon={<ArrowForwardIcon />}
-              >
-                Read more
-              </Button>
+              <Link to={"/product/1"}>
+                <Button
+                  mb={["5", "5", "0"]}
+                  w={["40%"]}
+                  marginLeft={["none", "none", "auto"]}
+                  mt={"5"}
+                  colorScheme="green"
+                  borderRadius={"none"}
+                  rightIcon={<ArrowForwardIcon />}
+                >
+                  Read more
+                </Button>
+              </Link>
             </Box>
             <Box
               display={"flex"}
               w={["100%", "100%", "60%"]}
               pl={["0", "0", "10"]}
               _hover={{
-                transform: "scale(1.1)",
+                transform: "scale(1.05)",
                 transition: " 0.8s all",
               }}
             >
@@ -337,7 +338,7 @@ function Home() {
               w={["100%", "100%", "60%"]}
               pr={["0", "0", "10"]}
               _hover={{
-                transform: "scale(1.1)",
+                transform: "scale(1.05)",
                 transition: " 0.8s all",
               }}
             >
@@ -349,10 +350,7 @@ function Home() {
               w={["100%", "100%", "40%"]}
               textAlign={["left", "left", "left"]}
             >
-              <Text fontSize={"xl"} as={"h1"}>
-                Second Lunar® Disposable Fully Electric Laparoscopic Cutting
-                Stapler
-              </Text>
+              <Text fontSize={"xl"} as={"h1"}></Text>
               <Box>
                 <Text>
                   Inheritance in the era of intelligent squeezing, a master of
@@ -412,7 +410,7 @@ function Home() {
               w={["100%", "100%", "60%"]}
               pl={["0", "0", "10"]}
               _hover={{
-                transform: "scale(1.1)",
+                transform: "scale(1.05)",
                 transition: " 0.8s all",
               }}
             >
@@ -429,7 +427,7 @@ function Home() {
               w={["100%", "100%", "60%"]}
               pr={["0", "0", "10"]}
               _hover={{
-                transform: "scale(1.1)",
+                transform: "scale(1.05)",
                 transition: " 0.8s all",
               }}
             >
