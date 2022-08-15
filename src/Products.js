@@ -239,4 +239,34 @@ export const Products = [
       "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660512824/InfinityDevices/CatalogImages/Mini%20Trocars/Mini_trocars_nomeclature2_urfjsj.png",
     ],
   },
+  {
+    id: 8,
+    title: "Ultrasound Activated Scalpel System",
+    description:
+      "Ultrasound activated scalpel system has full sizes of shears in pistol-type and scissor-type, which can meet the surgical demands of multiple departments such as gastrointestinal surgery, hepatobiliary surgery, gynecology, thoracic surgery, urology, thyroid surgery, breast surgery and etc. ",
+    features: [
+      "With ITM intelligent tissue monitoring technology, generator can adjust the energy output automatically and accurately to ensure the best effort of vascular closure and reduce thermal damage to different tissues.",
+      "Generator maintains 55.5KHz vibration frequency",
+      "Improved titanium material for the scalpel tip",
+      "Embedded pad, more firm",
+      "Ergonomic design, more comfortable to hold",
+      "Two-color cast plastic handle, more comfortable, safer and more reliable",
+      "45cm super long shear which is suitable for gastrointestinal bariatric surgery, single port laparoscopic surgery, etc.",
+    ],
+    benefits: [
+      "The hand piece can be sterilized by autoclaved, which is faster, thorough, safe and environmentally friendly",
+      "The unique piezoelectric ceramic material in the hand piece makes the energy output more stable, and the hand piece continues to work without high temperature.",
+      "Less injury to tissue.",
+      "Finish cutting and coagulating at the same time.",
+    ],
+    images: [
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660556568/InfinityDevices/CatalogImages/Hocer/apparatus_jor3nh.jpg",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660556561/InfinityDevices/CatalogImages/Hocer/hocer2_umbcfu.jpg",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660557273/InfinityDevices/CatalogImages/Hocer/hocer3_wi6uij.png",
+    ],
+    nomenclature: [
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660556311/InfinityDevices/CatalogImages/Hocer/Screen_Shot_2022-08-15_at_12.37.08_bjr18i.png",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660557600/InfinityDevices/CatalogImages/Hocer/Screen_Shot_2022-08-15_at_12.59.29_xbfdga.png",
+    ],
+  },
 ];
