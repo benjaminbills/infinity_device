@@ -26,7 +26,7 @@ function Contact() {
 
     // background:
     //   "url(https://picsum.photos/id/1080/200/300) center/cover no-repeat",
-    background: `url(https://images.unsplash.com/photo-1611144727915-ef30a08aaeb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80) center/cover no-repeat`,
+    background: `url(https://res.cloudinary.com/dd2y96zp9/image/upload/v1660521738/InfinityDevices/Assest/nairobi_eabc6z.jpg) center/cover no-repeat`,
   };
   const innerBoxStyles = {
     display: "flex",
@@ -40,8 +40,8 @@ function Contact() {
   };
   return (
     <Container maxW="container.xl">
-      <Box pt="10" pb="10">
-        <Center>
+      <Box pt="5" pb="10">
+        <Center pb={"5"}>
           <Text fontSize={["2xl", "3xl"]} as={"h1"}>
             Contact Us
           </Text>
@@ -73,16 +73,15 @@ function Contact() {
               <Box p="4">
                 <Text mb={"1"}>
                   <Icon as={GoLocation} mr={"2"} />
-                  Elgon Court Apartment D2, Ralph Bunche Road
+                  Elgon Court D2, Ralph Bunche Road, Upperhill
                 </Text>
                 <Text mb={"1"}>
                   <Icon as={FiPhoneCall} mr={"2"} />
-                  0743156011, 0743156011
+                  0706731683, 0734329563
                 </Text>
                 <Text mb={"1"}>
                   {" "}
-                  <Icon as={MdOutlineEmail} mr={"2"} />{" "}
-                  infinitydevices@gmail.com
+                  <Icon as={MdOutlineEmail} mr={"2"} /> info@infinitydevices.com
                 </Text>
               </Box>
             </Box>
