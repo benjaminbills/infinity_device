@@ -60,6 +60,8 @@ function Contact() {
             sx={basicBoxStyles}
             filter="grayscale(80%)"
             brightness="50%"
+            fontSize={"xl"}
+            fontWeight={"bold"}
           >
             {" "}
             <Box
@@ -77,11 +79,14 @@ function Contact() {
                 </Text>
                 <Text mb={"1"}>
                   <Icon as={FiPhoneCall} mr={"2"} />
-                  0706731683, 0734329563
+                  <a href="tel:0706731683">0706731683</a>,
+                  <a href="tel:0734329563">0734329563</a>
                 </Text>
                 <Text mb={"1"}>
-                  {" "}
-                  <Icon as={MdOutlineEmail} mr={"2"} /> info@infinitydevices.com
+                  <a href="mailto:obafemibenjamins@gmail.com">
+                    <Icon as={MdOutlineEmail} mr={"2"} />
+                    info@infinitydevices.com
+                  </a>
                 </Text>
               </Box>
             </Box>

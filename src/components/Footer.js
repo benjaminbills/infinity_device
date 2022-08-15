@@ -7,6 +7,7 @@ import {
   FormLabel,
   Hide,
   HStack,
+  Icon,
   Image,
   Input,
   InputGroup,
@@ -18,7 +19,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
+import { GoLocation } from "react-icons/go";
+import { FiPhoneCall } from "react-icons/fi";
+import { MdOutlineEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { BsWhatsapp } from "react-icons/bs";
 import Logo from "../assets/images/logo.jpeg";
 import Map from "./Map";
 function Footer() {
@@ -43,7 +48,7 @@ function Footer() {
                   <Avatar size={"sm"} src={Logo} />
                 </MenuButton>
               </Menu>
-              <Text as={"h1"} fontSize="2xl" ml={"2"}>
+              <Text as={"h1"} fontSize="2xl" ml={"2"} fontWeight={"bold"}>
                 Infinity Devices
               </Text>
             </Box>
@@ -73,16 +78,45 @@ function Footer() {
             <Box
               display={"flex"}
               flexDir="column"
-              fontSize={"lg"}
+              fontSize={"xl"}
+              fontWeight={"bold"}
               justifyContent="space-between"
             >
               <Text mb={"2"}>
-                Company Address: Elgon Court D2, Ralph Bunche Road, Upperhill
+                <Icon as={GoLocation} mr={"2"} /> Elgon Court D2, Ralph Bunche
+                Road, Upperhill
               </Text>
-              <Text mb={"2"}>Contact Number:0706731683, 0734329563</Text>
-              <Text mb={"2"}>Email:info@infinitydevices.com</Text>
+              <Text mb={"2"}>
+                <Icon as={FiPhoneCall} mr={"2"} />
+                <a href="tel:0706731683">0706731683</a>,
+                <a href="tel:0734329563">0734329563</a>
+              </Text>
+
+              <Text mb={"2"}>
+                <a href="mailto:obafemibenjamins@gmail.com">
+                  <Icon as={MdOutlineEmail} mr={"2"} />
+                  info@infinitydevices.com
+                </a>
+              </Text>
+
+              <a
+                href={
+                  "https://wa.me/254792300998?text=I'm%20interested%20in%20%20infinity%20device%20products"
+                }
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Text>
+                  {" "}
+                  <Icon as={BsWhatsapp} mr={"2"} />
+                  Click to send us a whatsapp message.
+                </Text>
+              </a>
+
               <FormControl>
-                <FormLabel>Get notified when we add new products</FormLabel>
+                <FormLabel fontSize={"xl"}>
+                  Get notified when we add new products
+                </FormLabel>
                 <InputGroup
                   color={"white"}
                   w={["100%", "100%", "50%"]}

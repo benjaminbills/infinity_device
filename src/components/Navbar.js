@@ -83,6 +83,7 @@ function Navbar() {
               <Box>
                 <Link
                   fontSize={["2xl"]}
+                  fontWeight={"bold"}
                   textDecoration={"none"}
                   _hover={{
                     textDecoration: "none",
