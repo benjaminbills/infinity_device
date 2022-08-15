@@ -32,7 +32,7 @@ function Footer() {
               <Box ml={"1"} background={"white"} w="30px" borderRadius={"full"}>
                 <Image boxSize="30px" src={Logo} alt="infinity devices" />
               </Box>
-              <Text as={"h1"} fontSize="xl" ml={"2"}>
+              <Text as={"h1"} fontSize="2xl" ml={"2"}>
                 Infinity Devices
               </Text>
             </Box>
