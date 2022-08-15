@@ -27,7 +27,7 @@ function Product() {
   const getProduct = Products.filter((product) => product.id === id);
   // console.log(getProduct);
   return (
-    <Box>
+    <Box pb={"10"}>
       {product !== null ? (
         <Container maxW="container.xl">
           <Stack pt="10" w="100%" pb={"5"} flexDir={["column", "row", "row"]}>

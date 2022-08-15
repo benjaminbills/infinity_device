@@ -19,7 +19,7 @@ import { BiAnchor } from "react-icons/bi";
 import { TiSpiral } from "react-icons/ti";
 function About() {
   return (
-    <Container maxW="container.xl">
+    <Container maxW="container.xl" pb={"10"}>
       <Box pt="5">
         <Center>
           <Text fontSize={["2xl", "3xl"]} as={"h1"}>
