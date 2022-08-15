@@ -94,14 +94,16 @@ function Home() {
             <Text pb={"5"}>
               We journey with you everyday and each day with you is a gift.
             </Text>
-            <Button
-              rightIcon={<ArrowForwardIcon />}
-              colorScheme="teal"
-              variant="outline"
-              borderRadius={"none"}
-            >
-              View Catalog
-            </Button>
+            <Link to={"/catalog"}>
+              <Button
+                rightIcon={<ArrowForwardIcon />}
+                colorScheme="teal"
+                variant="outline"
+                borderRadius={"none"}
+              >
+                View Catalog
+              </Button>
+            </Link>
           </Box>
           <Box w={["100%", "50%", "25%"]}>
             <Container display={"flex"} flexDir="column">
