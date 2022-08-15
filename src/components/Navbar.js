@@ -82,7 +82,7 @@ function Navbar() {
             <HStack spacing={8} alignItems={"center"}>
               <Box>
                 <Link
-                  fontSize={["xl"]}
+                  fontSize={["2xl"]}
                   textDecoration={"none"}
                   _hover={{
                     textDecoration: "none",
@@ -195,6 +195,18 @@ function Navbar() {
                 href={"/catalog"}
               >
                 Catalog
+              </Link>
+              <Link
+                px={2}
+                py={1}
+                rounded={"md"}
+                _hover={{
+                  textDecoration: "none",
+                  bg: "gray.200",
+                }}
+                href={"/contact"}
+              >
+                Contact us
               </Link>
             </Stack>
           </Box>
