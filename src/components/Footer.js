@@ -41,13 +41,16 @@ function Footer() {
               <Box>
                 <HStack>
                   <Box>
-                    <Link to="/about">About</Link>
-                  </Box>
-                  <Box>
                     <Link to="/">Home</Link>
                   </Box>
                   <Box>
-                    <Link to="contact">Contact Us</Link>
+                    <Link to="/about">About</Link>
+                  </Box>
+                  <Box>
+                    <Link to="/catalog">Catalog</Link>
+                  </Box>
+                  <Box>
+                    <Link to="/contact">Contact Us</Link>
                   </Box>
                 </HStack>
               </Box>
