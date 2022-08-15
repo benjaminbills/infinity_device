@@ -99,21 +99,20 @@ function Footer() {
                 </a>
               </Text>
 
-              <a
-                href={
-                  "https://wa.me/254792300998?text=I'm%20interested%20in%20%20infinity%20device%20products"
-                }
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Text>
-                  {" "}
+              <Text>
+                <a
+                  href={
+                    "https://wa.me/254792300998?text=I'm%20interested%20in%20%20infinity%20device%20products"
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Icon as={BsWhatsapp} mr={"2"} />
                   Click to send us a whatsapp message.
-                </Text>
-              </a>
+                </a>
+              </Text>
 
-              <FormControl>
+              {/* <FormControl>
                 <FormLabel fontSize={"xl"}>
                   Get notified when we add new products
                 </FormLabel>
@@ -139,7 +138,7 @@ function Footer() {
                     </Button>
                   </InputRightElement>
                 </InputGroup>
-              </FormControl>
+              </FormControl> */}
             </Box>
             <Spacer />
             <Box pt={["4", "4", "0"]}>
