@@ -48,7 +48,7 @@ function Footer() {
                   <Avatar size={"sm"} src={Logo} />
                 </MenuButton>
               </Menu>
-              <Text as={"h1"} fontSize="2xl" ml={"2"} fontWeight={"bold"}>
+              <Text as={"h1"} fontSize="xl" ml={"2"} fontWeight={"bold"}>
                 Infinity Devices
               </Text>
             </Box>
@@ -78,7 +78,7 @@ function Footer() {
             <Box
               display={"flex"}
               flexDir="column"
-              fontSize={"xl"}
+              fontSize={"lg"}
               fontWeight={"bold"}
               justifyContent="space-between"
             >

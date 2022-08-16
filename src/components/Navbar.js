@@ -82,7 +82,7 @@ function Navbar() {
             <HStack spacing={8} alignItems={"center"}>
               <Box>
                 <Link
-                  fontSize={["2xl"]}
+                  fontSize={["xl"]}
                   fontWeight={"bold"}
                   textDecoration={"none"}
                   _hover={{
