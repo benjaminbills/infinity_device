@@ -83,8 +83,14 @@ function Footer() {
               justifyContent="space-between"
             >
               <Text mb={"2"}>
-                <Icon as={GoLocation} mr={"2"} /> Elgon Court D2, Ralph Bunche
-                Road, Upperhill
+                <a
+                  href="https://goo.gl/maps/7LESANqQ6QqxymqZ7"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  <Icon as={GoLocation} mr={"2"} /> Elgon Court D2, Ralph Bunche
+                  Road, Upperhill
+                </a>
               </Text>
               <Text mb={"2"}>
                 <Icon as={FiPhoneCall} mr={"2"} />
@@ -93,7 +99,7 @@ function Footer() {
               </Text>
 
               <Text mb={"2"}>
-                <a href="mailto:obafemibenjamins@gmail.com">
+                <a href="mailto:info@infinitydevices.co">
                   <Icon as={MdOutlineEmail} mr={"2"} />
                   info@infinitydevices.co
                 </a>
@@ -102,7 +108,7 @@ function Footer() {
               <Text>
                 <a
                   href={
-                    "https://wa.me/254792300998?text=I'm%20interested%20in%20%20infinity%20device%20products"
+                    "https://api.whatsapp.com/send?phone=2347036445198&text=I%20am%20interested%20in%20infinity%20devices%20product"
                   }
                   target="_blank"
                   rel="noreferrer"
@@ -149,7 +155,8 @@ function Footer() {
         <Box mt={"4"}>
           <hr />
           <Text>
-            Copyright 2021-{new Date().getFullYear()}, Infinity Devices.
+            Copyright 2021-{new Date().getFullYear()}, Infinity Devices Africa
+            Ltd.
           </Text>
         </Box>
       </Container>
