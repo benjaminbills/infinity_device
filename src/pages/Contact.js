@@ -11,11 +11,16 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef } from "react";
 import { GoLocation } from "react-icons/go";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import { Keys } from "../keys";
 function Contact() {
+  const form = useRef();
+
   const basicBoxStyles = {
     display: "flex",
     alignItems: "center",
@@ -38,6 +43,36 @@ function Contact() {
     color: "white.100",
     fontSize: "20px",
   };
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        `${Keys.email.EMAIL_SERVICE_KEY}`,
+        `${Keys.email.EMAIL_TEMPLATE_ID}`,
+        form.current,
+        `${Keys.email.EMAIL_PUBLIC_KEY}`
+      )
+      .then(
+        (result) => {
+          Swal.fire(
+            "Message sent",
+            "You have successful sent your message",
+            "success"
+          );
+          e.target.reset();
+        },
+        (error) => {
+          Swal.fire({
+            title: "Error!",
+            text: "Something went wrong. Please try again or call us",
+            icon: "error",
+            confirmButtonText: "Cool",
+          });
+        }
+      );
+  };
+
   return (
     <Container maxW="container.xl">
       <Box pt="5" pb="10">
@@ -92,28 +127,39 @@ function Contact() {
             </Box>
           </Box>
           <Box p={["4", "4", "4"]} w={["100%", "100%", "60%"]}>
-            <FormControl isRequired>
-              <FormLabel>Name</FormLabel>
-              <Input type={"text"} placeholder="Please enter your name" />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Email</FormLabel>
-              <Input type={"email"} placeholder="you@gmail.com" />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Phone</FormLabel>
-              <Input
-                type={"phone"}
-                placeholder="Please enter your phone number"
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel>Message</FormLabel>
-              <Textarea type={"text"} placeholder="you@gmail.com" />
-            </FormControl>
-            <Button colorScheme={"green"} mt={"4"}>
-              Submit
-            </Button>
+            <form ref={form} onSubmit={sendEmail}>
+              <FormControl isRequired>
+                <FormLabel>Name</FormLabel>
+                <Input
+                  type={"text"}
+                  name="user_name"
+                  placeholder="Please enter your name"
+                />
+              </FormControl>
+              <FormControl isRequired>
+                <FormLabel>Email</FormLabel>
+                <Input
+                  type={"email"}
+                  name="user_email"
+                  placeholder="you@gmail.com"
+                />
+              </FormControl>
+              <FormControl isRequired>
+                <FormLabel>Phone</FormLabel>
+                <Input
+                  type={"phone"}
+                  placeholder="Please enter your phone number"
+                  name="user_phone"
+                />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Message</FormLabel>
+                <Textarea type={"text"} placeholder="you@gmail.com" />
+              </FormControl>
+              <Button type="submit" colorScheme={"green"} mt={"4"}>
+                Submit
+              </Button>
+            </form>
           </Box>
         </Box>
       </Box>
