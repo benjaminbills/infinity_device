@@ -93,7 +93,7 @@ function Navbar() {
                   rounded={"md"}
                   href={"/"}
                 >
-                  Infinity Devices
+                  Infinity Devices Africa
                 </Link>
               </Box>
               <HStack

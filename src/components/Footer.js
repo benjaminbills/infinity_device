@@ -49,7 +49,7 @@ function Footer() {
                 </MenuButton>
               </Menu>
               <Text as={"h1"} fontSize="xl" ml={"2"} fontWeight={"bold"}>
-                Infinity Devices
+                Infinity Devices Africa
               </Text>
             </Box>
             <Spacer />
@@ -95,7 +95,7 @@ function Footer() {
               <Text mb={"2"}>
                 <a href="mailto:obafemibenjamins@gmail.com">
                   <Icon as={MdOutlineEmail} mr={"2"} />
-                  info@infinitydevices.com
+                  info@infinitydevices.co
                 </a>
               </Text>
 
