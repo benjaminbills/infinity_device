@@ -55,14 +55,16 @@ function Catalog() {
                     boxShadow="base"
                   >
                     <Box display={"flex"} flexDir={"column"}>
-                      <Box
-                        _hover={{
-                          transform: "scale(1.1)",
-                          transition: " 0.8s all",
-                        }}
-                      >
-                        <Image src={product.images[0]} maxH={"300px"} />
-                      </Box>
+                      <Center>
+                        <Box
+                          _hover={{
+                            transform: "scale(1.1)",
+                            transition: " 0.8s all",
+                          }}
+                        >
+                          <Image src={product.images[0]} maxH={"300px"} />
+                        </Box>
+                      </Center>
 
                       <Box p={"4"}>
                         <Text
