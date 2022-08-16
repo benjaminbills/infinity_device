@@ -412,7 +412,7 @@ function Home() {
                 </Text>
               </Box>
 
-              <Link to={"/product/1"}>
+              <Link to={"/product/9"}>
                 <Button
                   mb={["5", "5", "0"]}
                   w={["40%"]}
@@ -507,18 +507,19 @@ function Home() {
                   scientific anastomosis and technology integration
                 </Text>
               </Box>
-
-              <Button
-                mb={["5", "5", "0"]}
-                w={["40%"]}
-                marginRight={["none", "none", "auto"]}
-                mt={"5"}
-                colorScheme="green"
-                borderRadius={"none"}
-                rightIcon={<ArrowForwardIcon />}
-              >
-                Read more
-              </Button>
+              <Link to={"/product/8"}>
+                <Button
+                  mb={["5", "5", "0"]}
+                  w={["40%"]}
+                  marginRight={["none", "none", "auto"]}
+                  mt={"5"}
+                  colorScheme="green"
+                  borderRadius={"none"}
+                  rightIcon={<ArrowForwardIcon />}
+                >
+                  Read more
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Stack>
