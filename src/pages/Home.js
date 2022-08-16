@@ -11,11 +11,14 @@ import {
 import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import hocer from "../assets/images/hocerlogo.png";
+import hocer2 from "../assets/images/hocer2.jpeg";
+
 import fengh from "../assets/images/fengh.jpeg";
 import landing from "../assets/images/landing.jpg";
 import disposableBurstPolymer from "../assets/images/DisposableBurstClip.png";
 import ElectricLaparoscopicCutting from "../assets/images/ElectricLaparoscopicCutting.jpeg";
 import SmartPressElectric from "../assets/images/SmartPressElectric.jpeg";
+// import LunarGif from "../assets/images/lunar.gif";
 
 import Apparatus from "../assets/images/apparatus.jpeg";
 import Hocer from "../assets/images/hocer2.jpeg";
@@ -89,7 +92,7 @@ function Home() {
           <Box w={["100%", "50%", "75%"]}>
             <Text fontSize={"4xl"} as={"h1"}>
               {" "}
-              Better Pricing, <br /> Guaranteed
+              Your clinical outcomes <br /> matter
             </Text>
             <Text pb={"5"}>
               We journey with you everyday and each day with you is a gift.
@@ -108,7 +111,51 @@ function Home() {
           <Box w={["100%", "50%", "25%"]}>
             <Container display={"flex"} flexDir="column">
               <Box position={"relative"}>
-                <Image src={Apparatus} />
+                <Carousel
+                  autoPlay={true}
+                  showThumbs={false}
+                  showStatus={false}
+                  showArrows={false}
+                  infiniteLoop={true}
+                  stopOnHover={true}
+                  swipeable={true}
+                  dynamicHeight={true}
+                  emulateTouch={true}
+                  transitionTime={500}
+                  interval={6000}
+                >
+                  <Box position={"relative"}>
+                    <Image src={Apparatus} />
+                  </Box>
+
+                  <Box position={"relative"}>
+                    <Image
+                      src={
+                        "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660662889/InfinityDevices/CatalogImages/product2_bogthn.png"
+                      }
+                    />
+                  </Box>
+                  <Box position={"relative"}>
+                    <Image
+                      src={
+                        "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642302/InfinityDevices/CatalogImages/QuanClip/quanclip_nomeclature1_sn1bob.png"
+                      }
+                    />
+                  </Box>
+                  <Box position={"relative"}>
+                    <Image
+                      src={
+                        "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642307/InfinityDevices/CatalogImages/QuanClip/quanclip_nomeclature2_y1uv5p.png"
+                      }
+                    />
+                  </Box>
+                  {/* <Box minH={"300px"} position={"relative"}>
+                    <Image src={disposableBurstPolymer} />
+                  </Box> */}
+                  {/* <Box minH={"300px"} position={"relative"}>
+                    <Image src={LunarGif} />
+                  </Box> */}
+                </Carousel>
               </Box>
             </Container>
           </Box>
@@ -231,7 +278,7 @@ function Home() {
           <Box w={["100%", "100%", "50%"]}>
             <Box position={"relative"} mb={"5"}>
               <Text className="underline" fontSize={["2xl", "3xl"]} as={"h1"}>
-                Infinity Devices
+                Infinity Devices Africa
               </Text>
             </Box>
             <Box pr={["none", "none", "8"]}>
@@ -285,10 +332,11 @@ function Home() {
         <Stack flexDir={"column"} pb={"10"}>
           <Box
             display={"flex"}
-            flexDir={["column", "column", "row"]}
+            flexDir={["column-reverse", "column-reverse", "row"]}
             pt={["0", "0", "0"]}
           >
             <Box
+              pt={["2", "2", "0"]}
               display={"flex"}
               flexDir={"column"}
               w={["100%", "100%", "40%"]}
@@ -332,7 +380,7 @@ function Home() {
           </Box>
           <Box
             display={"flex"}
-            flexDir={["column-reverse", "column-reverse", "row"]}
+            flexDir={["column", "column", "row"]}
             pt={["0", "0", "10"]}
           >
             <Box
@@ -347,65 +395,73 @@ function Home() {
               <Image src={disposableBurstPolymer} />
             </Box>
             <Box
+              pt={["2", "2", "0"]}
               display={"flex"}
               flexDir={"column"}
               w={["100%", "100%", "40%"]}
               textAlign={["left", "left", "left"]}
             >
-              <Text fontSize={"xl"} as={"h1"}></Text>
+              <Text fontSize={"xl"} as={"h1"}>
+                Disposable burst polymer clip applier
+              </Text>
               <Box>
                 <Text>
-                  Inheritance in the era of intelligent squeezing, a master of
-                  scientific anastomosis and technology integration
+                  Disposable single-shot polymer ligation clips and multiplex
+                  clip appliers are also provided, which can be applied to
+                  different surgical scenarios
                 </Text>
               </Box>
 
-              <Button
-                mb={["5", "5", "0"]}
-                w={["40%"]}
-                marginRight={["none", "none", "auto"]}
-                mt={"5"}
-                colorScheme="green"
-                borderRadius={"none"}
-                rightIcon={<ArrowForwardIcon />}
-              >
-                Read more
-              </Button>
+              <Link to={"/product/1"}>
+                <Button
+                  mb={["5", "5", "0"]}
+                  w={["40%"]}
+                  marginLeft={["none", "none", "auto"]}
+                  mt={"5"}
+                  colorScheme="green"
+                  borderRadius={"none"}
+                  rightIcon={<ArrowForwardIcon />}
+                >
+                  Read more
+                </Button>
+              </Link>
             </Box>
           </Box>
           <Box
             display={"flex"}
-            flexDir={["column", "column", "row"]}
+            flexDir={["column-reverse", "column-reverse", "row"]}
             pt={["0", "0", "10"]}
           >
             <Box
+              pt={["2", "2", "0"]}
               display={"flex"}
               flexDir={"column"}
               w={["100%", "100%", "40%"]}
               textAlign={["left", "left", "right"]}
             >
               <Text fontSize={"xl"} as={"h1"}>
-                New Lunar® Disposable Fully Electric Laparoscopic Cutting
-                Stapler
+                Lunar® Smart Press Electric Laparoscopic Stapler{" "}
               </Text>
               <Box>
                 <Text>
-                  Inheritance in the era of intelligent squeezing, a master of
-                  scientific anastomosis and technology integration
+                  Fenghe Innovation's "guided pre-press" uses electromechanical
+                  technology to integrate surgery into products, taking the
+                  first step towards intelligent anastomosis
                 </Text>
               </Box>
-
-              <Button
-                mb={["5", "5", "0"]}
-                w={["40%"]}
-                marginLeft={["none", "none", "auto"]}
-                mt={"5"}
-                colorScheme="green"
-                borderRadius={"none"}
-                rightIcon={<ArrowForwardIcon />}
-              >
-                Read more
-              </Button>
+              <Link to={"/product/1"}>
+                <Button
+                  mb={["5", "5", "0"]}
+                  w={["40%"]}
+                  marginLeft={["none", "none", "auto"]}
+                  mt={"5"}
+                  colorScheme="green"
+                  borderRadius={"none"}
+                  rightIcon={<ArrowForwardIcon />}
+                >
+                  Read more
+                </Button>
+              </Link>
             </Box>
             <Box
               display={"flex"}
@@ -421,7 +477,7 @@ function Home() {
           </Box>
           <Box
             display={"flex"}
-            flexDir={["column-reverse", "column-reverse", "row"]}
+            flexDir={["column", "column", "row"]}
             pt={["0", "0", "10"]}
           >
             <Box
@@ -436,6 +492,7 @@ function Home() {
               <Image src={Hocer} />
             </Box>
             <Box
+              pt={["2", "2", "0"]}
               display={"flex"}
               flexDir={"column"}
               w={["100%", "100%", "40%"]}
