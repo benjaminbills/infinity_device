@@ -269,4 +269,35 @@ export const Products = [
       "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660557600/InfinityDevices/CatalogImages/Hocer/Screen_Shot_2022-08-15_at_12.59.29_xbfdga.png",
     ],
   },
+  {
+    id: 9,
+    title: "QuanClip Disposable",
+    description:
+      "Disposable single-shot polymer ligation clips and multiplex clip appliers are also provided, which can be applied to different surgical scenarios",
+    features: [
+      "It can greatly improve the fluency and safety of surgery, save surgical resources, and reduce patients' anesthesia time and postoperative complications.",
+
+      "Enables continuous clip application, saving more than half the time of handling vessels and casts",
+      "Faster and more effective treatment of accidental bleeding",
+
+      "Original ligation release device in jaws, reverse release of ligation clip to ensure no adhesion release, avoid blood vessel damage and reduce surgical accidents",
+      "One-time use, no need to re-sterilize instruments, reduce cross-infection",
+    ],
+    benefits: [
+      "Disposable single-shot polymer ligation clips and multiplex clip appliers are also provided, which can be applied to different surgical scenarios",
+    ],
+    images: [
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642345/InfinityDevices/CatalogImages/QuanClip/quanclip_display_hdcgrm.png",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642301/InfinityDevices/CatalogImages/QuanClip/quanclip1_bvexnb.png",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642303/InfinityDevices/CatalogImages/QuanClip/quanclip2_oyr9qd.png",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642313/InfinityDevices/CatalogImages/QuanClip/quanclip3_lpkkc1.png",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642309/InfinityDevices/CatalogImages/QuanClip/quanclip4_vygm3g.png",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642327/InfinityDevices/CatalogImages/QuanClip/quanclip5_jwvk0t.png",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642313/InfinityDevices/CatalogImages/QuanClip/quanclip6_eirbya.png",
+    ],
+    nomenclature: [
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642302/InfinityDevices/CatalogImages/QuanClip/quanclip_nomeclature1_sn1bob.png",
+      "https://res.cloudinary.com/dd2y96zp9/image/upload/v1660642307/InfinityDevices/CatalogImages/QuanClip/quanclip_nomeclature2_y1uv5p.png",
+    ],
+  },
 ];
