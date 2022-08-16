@@ -66,7 +66,7 @@ function Footer() {
                     <Link to="/catalog">Catalog</Link>
                   </Box>
                   <Box>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/contact">Contact us</Link>
                   </Box>
                 </HStack>
               </Box>

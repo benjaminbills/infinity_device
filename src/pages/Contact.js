@@ -78,7 +78,7 @@ function Contact() {
       <Box pt="5" pb="10">
         <Center pb={"5"}>
           <Text fontSize={["2xl", "3xl"]} as={"h1"}>
-            Contact Us
+            Contact us
           </Text>
         </Center>
         <Box
