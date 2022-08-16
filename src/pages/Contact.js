@@ -109,8 +109,14 @@ function Contact() {
             >
               <Box p="4">
                 <Text mb={"1"}>
-                  <Icon as={GoLocation} mr={"2"} />
-                  Elgon Court D2, Ralph Bunche Road, Upperhill
+                  <a
+                    href="https://goo.gl/maps/7LESANqQ6QqxymqZ7"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <Icon as={GoLocation} mr={"2"} /> Elgon Court D2, Ralph
+                    Bunche Road, Upperhill
+                  </a>
                 </Text>
                 <Text mb={"1"}>
                   <Icon as={FiPhoneCall} mr={"2"} />
@@ -118,9 +124,9 @@ function Contact() {
                   <a href="tel:0734329563">0734329563</a>
                 </Text>
                 <Text mb={"1"}>
-                  <a href="mailto:obafemibenjamins@gmail.com">
+                  <a href="mailto:info@infinitydevices.co">
                     <Icon as={MdOutlineEmail} mr={"2"} />
-                    info@infinitydevices.com
+                    info@infinitydevices.co
                   </a>
                 </Text>
               </Box>
@@ -141,7 +147,7 @@ function Contact() {
                 <Input
                   type={"email"}
                   name="user_email"
-                  placeholder="you@gmail.com"
+                  placeholder="youremail@gmail.com"
                 />
               </FormControl>
               <FormControl isRequired>
@@ -154,7 +160,11 @@ function Contact() {
               </FormControl>
               <FormControl>
                 <FormLabel>Message</FormLabel>
-                <Textarea type={"text"} placeholder="you@gmail.com" />
+                <Textarea
+                  type={"text"}
+                  name="message"
+                  placeholder="Your message"
+                />
               </FormControl>
               <Button type="submit" colorScheme={"green"} mt={"4"}>
                 Submit
