@@ -19,8 +19,10 @@ import {
   useColorModeValue,
   Stack,
   Container,
+  Text,
+  Center,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import React from "react";
 // import { Link  } from "react-router-dom";
 import Logo from "../assets/images/logo.jpeg";
@@ -80,7 +82,7 @@ function Navbar() {
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={"center"}>
-              <Box>
+              <Box display={"flex"}>
                 <Link
                   fontSize={["xl"]}
                   fontWeight={"bold"}
@@ -89,11 +91,15 @@ function Navbar() {
                     textDecoration: "none",
                   }}
                   px={2}
-                  py={1}
+                  py={2}
+                  mtt={1}
                   rounded={"md"}
                   href={"/"}
                 >
-                  Infinity Devices Africa
+                  Infinity Devices Africa Ltd
+                  <Center>
+                    <Text fontSize={"xs"}>By your side</Text>
+                  </Center>
                 </Link>
               </Box>
               <HStack
@@ -128,6 +134,7 @@ function Navbar() {
                 >
                   Catalog
                 </Link>
+
                 <Link
                   px={2}
                   py={1}
@@ -140,6 +147,78 @@ function Navbar() {
                 >
                   Contact us
                 </Link>
+
+                <Menu>
+                  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                    Affiliates
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem>
+                      <a
+                        px={2}
+                        py={1}
+                        rounded={"md"}
+                        _hover={{
+                          textDecoration: "none",
+                          bg: useColorModeValue("gray.200", "gray.700"),
+                        }}
+                        target="_blank"
+                        rel="noreferrer"
+                        href={"https://fenghmedical.nl/"}
+                      >
+                        Fengh Medical
+                      </a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a
+                        px={2}
+                        py={1}
+                        rounded={"md"}
+                        _hover={{
+                          textDecoration: "none",
+                          bg: useColorModeValue("gray.200", "gray.700"),
+                        }}
+                        target="_blank"
+                        rel="noreferrer"
+                        href={"http://www.fulbrightmed.com/"}
+                      >
+                        Fulbright
+                      </a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a
+                        px={2}
+                        py={1}
+                        rounded={"md"}
+                        _hover={{
+                          textDecoration: "none",
+                          bg: useColorModeValue("gray.200", "gray.700"),
+                        }}
+                        target="_blank"
+                        rel="noreferrer"
+                        href={"http://en.hocermed.com/"}
+                      >
+                        Hocer Med
+                      </a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a
+                        px={2}
+                        py={1}
+                        rounded={"md"}
+                        _hover={{
+                          textDecoration: "none",
+                          bg: useColorModeValue("gray.200", "gray.700"),
+                        }}
+                        target="_blank"
+                        rel="noreferrer"
+                        href={"https://www.rbt.global/"}
+                      >
+                        Residual Barrier Technology
+                      </a>
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
               </HStack>
             </HStack>
             <Flex alignItems={"center"}>
@@ -209,6 +288,77 @@ function Navbar() {
               >
                 Contact us
               </Link>
+              <Menu>
+                <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                  Affiliates
+                </MenuButton>
+                <MenuList>
+                  <MenuItem>
+                    <a
+                      px={2}
+                      py={1}
+                      rounded={"md"}
+                      _hover={{
+                        textDecoration: "none",
+                        bg: "gray.200",
+                      }}
+                      target="_blank"
+                      rel="noreferrer"
+                      href={"https://fenghmedical.nl/"}
+                    >
+                      Fengh Medical
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      px={2}
+                      py={1}
+                      rounded={"md"}
+                      _hover={{
+                        textDecoration: "none",
+                        bg: "gray.200",
+                      }}
+                      target="_blank"
+                      rel="noreferrer"
+                      href={"http://www.fulbrightmed.com/"}
+                    >
+                      Fulbright
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      px={2}
+                      py={1}
+                      rounded={"md"}
+                      _hover={{
+                        textDecoration: "none",
+                        bg: "gray.200",
+                      }}
+                      target="_blank"
+                      rel="noreferrer"
+                      href={"http://en.hocermed.com/"}
+                    >
+                      Hocer Med
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      px={2}
+                      py={1}
+                      rounded={"md"}
+                      _hover={{
+                        textDecoration: "none",
+                        bg: "gray.200",
+                      }}
+                      target="_blank"
+                      rel="noreferrer"
+                      href={"https://www.rbt.global/"}
+                    >
+                      Residual Barrier Technology
+                    </a>
+                  </MenuItem>
+                </MenuList>
+              </Menu>
             </Stack>
           </Box>
         ) : null}

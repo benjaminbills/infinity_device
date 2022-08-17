@@ -3,8 +3,10 @@ import {
   Button,
   Container,
   Image,
+  ListItem,
   Stack,
   Text,
+  UnorderedList,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
@@ -94,9 +96,7 @@ function Home() {
               {" "}
               Your clinical outcomes <br /> matter
             </Text>
-            <Text pb={"5"}>
-              We journey with you everyday and each day with you is a gift.
-            </Text>
+            <Text pb={"5"}>We'll journey with you everyday.</Text>
             <Link to={"/catalog"}>
               <Button
                 rightIcon={<ArrowForwardIcon />}
@@ -278,16 +278,28 @@ function Home() {
           <Box w={["100%", "100%", "50%"]}>
             <Box position={"relative"} mb={"5"}>
               <Text className="underline" fontSize={["2xl", "3xl"]} as={"h1"}>
-                Infinity Devices Africa
+                Infinity Devices Africa Ltd
               </Text>
             </Box>
             <Box pr={["none", "none", "8"]}>
-              <Text width={"100%"} textAlign={"justify"}>
-                Infinity Devices Africa Ltd, is a Company whose main focus is to
-                deliver technology driven solutions to a clinical problem via a
-                trio approach that encompasses the meeting of Clinical Need,
+              <Text width={"100%"} textAlign={"justify"} pb="3">
+                Infinity Devices Africa Ltd. is a Company whose main focus is to
+                deliver technology driven solutions to clinical problems via a
+                trio approach that encompasses the meeting of Clinical Needs,
                 Market Appropriate Pricing and Value Creation.
               </Text>
+
+              <Text pb="2">
+                We are a minimally invasive oriented medical devices company
+                that provides solutions in:
+              </Text>
+              <UnorderedList>
+                <ListItem>Laproscopic colorectal and open procedures.</ListItem>
+                <ListItem>
+                  Video Assisted Thoracoscopic Surgery (VATS).
+                </ListItem>
+                <ListItem>Bariatric Surgery and Liver Surgery.</ListItem>
+              </UnorderedList>
             </Box>
             <Link to="/about">
               <Button
@@ -313,10 +325,10 @@ function Home() {
           filter="auto"
           brightness="80%"
         >
-          <Text>
-            Walk with excellence,grow together with minimally invasive surgery -
-            a Kenyan- style solution for the integration of minimally invasive
-            surgery
+          <Text fontSize={"lg"}>
+            Walk with excellence,grow together with Minimally Invasive Surgery -
+            a Kenyan- style solution for the integration of Minimally Invasive
+            Surgery
           </Text>
           <Link to={"/catalog"}>
             <Button

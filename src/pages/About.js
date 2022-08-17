@@ -4,8 +4,10 @@ import {
   Container,
   Icon,
   Image,
+  ListItem,
   Stack,
   Text,
+  UnorderedList,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
@@ -38,15 +40,24 @@ function About() {
           >
             <Box position={"relative"} mb={"5"}>
               <Text className="underline" fontSize={["2xl", "3xl"]} as={"h1"}>
-                Infinity Devices
+                Infinity Devices Africa Ltd.
               </Text>
             </Box>
-            <Text textAlign={"justify"}>
-              Infinity Devices Africa Ltd, is a Company whose main focus is to
-              deliver technology driven solutions to a clinical problem via a
-              trio approach that encompasses the meeting of Clinical Need,
+            <Text textAlign={"justify"} pb="2">
+              Infinity Devices Africa Ltd. is a Company whose main focus is to
+              deliver technology driven solutions to clinical problems via a
+              trio approach that encompasses the meeting of Clinical Needs,
               Market Appropriate Pricing and Value Creation.
             </Text>
+            <Text pb="2">
+              We are a minimally invasive oriented medical devices company that
+              provides solutions in:
+            </Text>
+            <UnorderedList>
+              <ListItem>Laproscopic colorectal and open procedures.</ListItem>
+              <ListItem>Video Assisted Thoracoscopic Surgery (VATS).</ListItem>
+              <ListItem>Bariatric Surgery and Liver Surgery.</ListItem>
+            </UnorderedList>
           </Box>
         </Stack>
         <Stack flexDir={"column"}>
@@ -73,7 +84,7 @@ function About() {
                 >
                   <Icon as={IoIosPeople} w={8} h={8} />
                   <Text fontWeight={"bold"}>People</Text>
-                  <Text align={"justify"} pl="2" pr="2">
+                  <Text textAlign={"center"} pl="2" pr="2">
                     Be a great place to work as to attract and retain the best
                     talent in the Industry.
                   </Text>
@@ -92,7 +103,7 @@ function About() {
                 >
                   <Icon as={IoDiamondOutline} w={8} h={8} />
                   <Text fontWeight={"bold"}>Guaranteed Quality</Text>
-                  <Text align={"justify"} pl="2" pr="2">
+                  <Text textAlign={"center"} pl="2" pr="2">
                     Bring to market world-class quality, cost effective and
                     efficient, clinical technology driven products.
                   </Text>
@@ -111,7 +122,7 @@ function About() {
                 >
                   <Icon as={ImLink} w={8} h={8} />
                   <Text fontWeight={"bold"}>Partners</Text>
-                  <Text align={"justify"} pl="2" pr="2">
+                  <Text textAlign={"center"} pl="2" pr="2">
                     Nurture and grow a wide network of supply partners and
                     quality suppliers to offer an enduring value to all
                     stakeholders across the value chain.
@@ -131,7 +142,7 @@ function About() {
                 >
                   <Icon as={BiAnchor} w={8} h={8} />
                   <Text fontWeight={"bold"}>Productivity</Text>
-                  <Text align={"justify"} pl="2" pr="2">
+                  <Text textAlign={"center"} pl="2" pr="2">
                     Be highly effective, lean and a fast-moving organization by
                     leveraging on the collective strengths of our stakeholders.
                   </Text>
@@ -150,7 +161,7 @@ function About() {
                 >
                   <Icon as={TiSpiral} w={8} h={8} />
                   <Text fontWeight={"bold"}>Profit</Text>
-                  <Text align={"justify"} pl="2" pr="2">
+                  <Text textAlign={"center"} pl="2" pr="2">
                     Create long-term value for all stakeholders.
                   </Text>
                 </Center>
