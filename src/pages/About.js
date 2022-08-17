@@ -54,7 +54,7 @@ function About() {
               provides solutions in:
             </Text>
             <UnorderedList>
-              <ListItem>Laproscopic colorectal and open procedures.</ListItem>
+              <ListItem>Laparoscopic colorectal and open procedures.</ListItem>
               <ListItem>Video Assisted Thoracoscopic Surgery (VATS).</ListItem>
               <ListItem>Bariatric Surgery and Liver Surgery.</ListItem>
             </UnorderedList>

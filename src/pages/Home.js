@@ -294,7 +294,9 @@ function Home() {
                 that provides solutions in:
               </Text>
               <UnorderedList>
-                <ListItem>Laproscopic colorectal and open procedures.</ListItem>
+                <ListItem>
+                  Laparoscopic colorectal and open procedures.
+                </ListItem>
                 <ListItem>
                   Video Assisted Thoracoscopic Surgery (VATS).
                 </ListItem>
