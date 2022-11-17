@@ -17,7 +17,7 @@ function Map() {
 
 function MapOut() {
   const center = useMemo(
-    () => ({ lat: -1.2967914934844869, lng: 36.80692452943229 }),
+    () => ({ lat: -1.2967846592389902, lng: 36.806933985281354 }),
     []
   );
   return (

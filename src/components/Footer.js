@@ -17,56 +17,56 @@ import {
   Spacer,
   Stack,
   Text,
-} from "@chakra-ui/react";
-import React, { useRef } from "react";
-import { GoLocation } from "react-icons/go";
-import { FiPhoneCall } from "react-icons/fi";
-import { MdOutlineEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
-import { BsWhatsapp } from "react-icons/bs";
-import Logo from "../assets/images/logo.jpeg";
-import Map from "./Map";
+} from '@chakra-ui/react';
+import React, { useRef } from 'react';
+import { GoLocation } from 'react-icons/go';
+import { FiPhoneCall } from 'react-icons/fi';
+import { MdOutlineEmail } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import { BsWhatsapp } from 'react-icons/bs';
+import Logo from '../assets/images/logo.jpeg';
+import Map from './Map';
 function Footer() {
   const emailRef = useRef();
   const submitEmail = () => {
     console.log(emailRef.current.value);
   };
   return (
-    <Box bg={"#B0B0B0"} color={"white"} pt={"5"} pb={"5"} mt="auto" w="100%">
-      <Container maxW="container.xl">
-        <Stack flexDir={"column"}>
-          <Box display={"flex"}>
-            <Box display={"flex"}>
+    <Box bg={'#B0B0B0'} color={'white'} pt={'5'} pb={'5'} mt='auto' w='100%'>
+      <Container maxW='container.xl'>
+        <Stack flexDir={'column'}>
+          <Box display={'flex'}>
+            <Box display={'flex'}>
               <Menu>
                 <MenuButton
                   as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
+                  rounded={'full'}
+                  variant={'link'}
+                  cursor={'pointer'}
                   minW={0}
                 >
-                  <Avatar size={"sm"} src={Logo} />
+                  <Avatar size={'sm'} src={Logo} />
                 </MenuButton>
               </Menu>
-              <Text as={"h1"} fontSize="xl" ml={"2"} fontWeight={"bold"}>
+              <Text as={'h1'} fontSize='xl' ml={'2'} fontWeight={'bold'}>
                 Infinity Devices Africa
               </Text>
             </Box>
             <Spacer />
-            <Hide below="md">
+            <Hide below='md'>
               <Box>
                 <HStack>
                   <Box>
-                    <Link to="/">Home</Link>
+                    <Link to='/'>Home</Link>
                   </Box>
                   <Box>
-                    <Link to="/about">About</Link>
+                    <Link to='/about'>About</Link>
                   </Box>
                   <Box>
-                    <Link to="/catalog">Catalog</Link>
+                    <Link to='/catalog'>Catalog</Link>
                   </Box>
                   <Box>
-                    <Link to="/contact">Contact us</Link>
+                    <Link to='/contact'>Contact us</Link>
                   </Box>
                 </HStack>
               </Box>
@@ -74,33 +74,33 @@ function Footer() {
           </Box>
 
           <hr />
-          <Box display={"flex"} flexDir={["column", "column", "row"]}>
+          <Box display={'flex'} flexDir={['column', 'column', 'row']}>
             <Box
-              display={"flex"}
-              flexDir="column"
-              fontSize={"lg"}
-              fontWeight={"bold"}
-              justifyContent="space-between"
+              display={'flex'}
+              flexDir='column'
+              fontSize={'lg'}
+              fontWeight={'bold'}
+              justifyContent='space-between'
             >
-              <Text mb={"2"}>
+              <Text mb={'2'}>
                 <a
-                  href="https://goo.gl/maps/7LESANqQ6QqxymqZ7"
-                  target={"_blank"}
-                  rel="noreferrer"
+                  href='https://www.google.com/maps/place/Infinity+Devices+Africa+Ltd/@-1.2966088,36.8056231,18z/data=!4m5!3m4!1s0x182f113e393dfa65:0x4217a2f4dc4f0135!8m2!3d-1.2968061!4d36.8069371'
+                  target={'_blank'}
+                  rel='noreferrer'
                 >
-                  <Icon as={GoLocation} mr={"2"} /> Elgon Court D2, Ralph Bunche
+                  <Icon as={GoLocation} mr={'2'} /> Elgon Court D2, Ralph Bunche
                   Road, Upperhill
                 </a>
               </Text>
-              <Text mb={"2"}>
-                <Icon as={FiPhoneCall} mr={"2"} />
-                <a href="tel:0706731683">0706731683</a>,
-                <a href="tel:0734329563">0734329563</a>
+              <Text mb={'2'}>
+                <Icon as={FiPhoneCall} mr={'2'} />
+                <a href='tel:0706731683'>0706731683</a>,
+                <a href='tel:0734329563'>0734329563</a>
               </Text>
 
-              <Text mb={"2"}>
-                <a href="mailto:info@infinitydevices.co">
-                  <Icon as={MdOutlineEmail} mr={"2"} />
+              <Text mb={'2'}>
+                <a href='mailto:info@infinitydevices.co'>
+                  <Icon as={MdOutlineEmail} mr={'2'} />
                   info@infinitydevices.co
                 </a>
               </Text>
@@ -108,12 +108,12 @@ function Footer() {
               <Text>
                 <a
                   href={
-                    "https://api.whatsapp.com/send?phone=2347036445198&text=I%20am%20interested%20in%20infinity%20devices%20product"
+                    'https://api.whatsapp.com/send?phone=2347036445198&text=I%20am%20interested%20in%20infinity%20devices%20product'
                   }
-                  target="_blank"
-                  rel="noreferrer"
+                  target='_blank'
+                  rel='noreferrer'
                 >
-                  <Icon as={BsWhatsapp} mr={"2"} />
+                  <Icon as={BsWhatsapp} mr={'2'} />
                   Click to send us a whatsapp message.
                 </a>
               </Text>
@@ -147,12 +147,12 @@ function Footer() {
               </FormControl> */}
             </Box>
             <Spacer />
-            <Box pt={["4", "4", "0"]}>
+            <Box pt={['4', '4', '0']}>
               <Map />
             </Box>
           </Box>
         </Stack>
-        <Box mt={"4"}>
+        <Box mt={'4'}>
           <hr />
           <Text>
             Copyright 2021-{new Date().getFullYear()}, Infinity Devices Africa
