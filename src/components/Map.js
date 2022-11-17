@@ -1,14 +1,15 @@
-import { useMemo } from "react";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import { useMemo } from 'react';
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import { Keys } from '../keys';
 
 const containerStyle = {
-  width: "200px",
-  height: "200px",
+  width: '200px',
+  height: '200px',
 };
 
 function Map() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCh5ZjegbiTs3RRgjztpDPMeVvH_Zgv3wE",
+    googleMapsApiKey: `${Keys.google_map.GOOGLE_MAP_API}`,
   });
   if (!isLoaded) return <div>Loading...</div>;
   return <MapOut />;
@@ -23,7 +24,7 @@ function MapOut() {
     <GoogleMap
       zoom={18.7}
       center={center}
-      mapContainerClassName="map-container"
+      mapContainerClassName='map-container'
     >
       <Marker position={center} />
     </GoogleMap>
